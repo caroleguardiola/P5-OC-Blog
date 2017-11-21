@@ -10,6 +10,7 @@
 		<!-- Bootstrap -->
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/devicons.min.css" rel="stylesheet">
 
 
 		<link href="css/owl.carousel.css" rel="stylesheet">
