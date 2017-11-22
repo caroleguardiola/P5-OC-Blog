@@ -14,3 +14,11 @@ function listPosts()
 
     require('view/frontend/listPostsView.php');
 }
+
+function post($id)
+{
+	$postManager = new PostManager;
+    $post = $postManager->getPost($id);
+   
+    require('view/frontend/postView.php');
+}

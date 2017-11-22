@@ -14,6 +14,13 @@ try
         listPosts();
         die();
     }
+    if ($_GET['action'] == 'post' && isset($_GET['id']) && $_GET['id'] > 0) 
+    {
+        post($_GET['id']);
+        die();
+    }
+
+    echo 'Erreur 404';
 }
 
 catch(Exception $e)

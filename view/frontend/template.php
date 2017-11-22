@@ -59,7 +59,7 @@
 					                <li><a href="">Création blog post</a></li>
 					              </ul>
 				            </li>
-							<li><a href="#contact">Contact</a></li>
+							<li><a href="index.php">Contact</a></li>
 						</ul>
 					</div><!-- /.navbar-collapse -->
 				</div>
