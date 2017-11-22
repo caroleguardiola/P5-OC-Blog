@@ -625,7 +625,7 @@ h6 {
   color: #ff5a00;
 }
 .navbar-default {
-  background-color: rgba(251, 251, 250, 0.7);
+  background-color: rgba(251, 251, 250, 0.85);
   border-width: 0;
   margin-bottom: 0 !important;
 
@@ -711,7 +711,7 @@ h6 {
 .navbar-default .navbar-nav > li.active a:focus,
 .navbar-default .navbar-nav > li.active a:active {
   color: #fff;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(52, 18, 0, 1);
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
@@ -1728,8 +1728,8 @@ footer.site-footer a:hover {
 }
 @media (min-width: 768px) {
   .navbar-nav > li > a {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 27px;
+    padding-bottom: 27px;
   }
   .st-navbar-mini .navbar-default .navbar-nav > li > a {
     padding-top: 20px;
