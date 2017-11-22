@@ -2,8 +2,6 @@
 
 <?php ob_start();?>
 
-	
-
 		<section class="blog" id="blog">
 			<div class="container">
 				<div class="row">
@@ -27,7 +25,7 @@
 							
 							<div class="post-content">
 								<p><?= htmlspecialchars($data['chapo']);?><br />
-                          		<a href="" class="more-link">Continue reading <span class="meta-nav">&rarr;</span></a></p>
+                          		<a href="index.php?action=post&amp;id=<?= $data['id'] ?>" class="more-link">Continue reading <span class="meta-nav">&rarr;</span></a></p>
                           	<?php endwhile ?>
 							</div>
 						</div>
