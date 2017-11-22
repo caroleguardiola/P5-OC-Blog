@@ -55,7 +55,7 @@
 				                Blog 
 				              </a>
 					              <ul class="dropdown-menu">
-					              	<li><a href="blog_post.php">Blog</a></li>
+					              	<li><a href="index.php?action=listPosts">Blog</a></li>
 					                <li><a href="">Création blog post</a></li>
 					              </ul>
 				            </li>

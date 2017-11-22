@@ -2,4 +2,21 @@
 
 require('controler/frontend.php');
 
-require('view/frontend/indexView.php');
+try
+{
+	if (!isset($_GET['action'])) 
+	{
+		home();
+		die();
+	}
+	if ($_GET['action'] == 'listPosts') 
+    {
+        listPosts();
+        die();
+    }
+}
+
+catch(Exception $e)
+{
+	die('Erreur :' . $e-getMessage());
+}
