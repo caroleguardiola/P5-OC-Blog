@@ -663,7 +663,8 @@ h6 {
 }
 .navbar-default .navbar-brand {
   color: #ff5a00;
-  text-shadow: 1px 1px 1px rgba(52, 18, 0, 1);
+  text-shadow: 1px 1px 1px rgba(52, 18, 0, 0.5);
+  font-weight: 500;
 }
 .navbar-brand {
   height: auto;
@@ -1784,4 +1785,22 @@ footer p
 footer 
 {
 background-color: #fbfbfa;
+}
+
+.creation_post {
+  padding: 120px 0;
+}
+.creation_post form input,
+.creation_post form textarea {
+  margin-bottom: 30px;
+}
+
+.creation_post label
+{
+  color: #ff5a00;
+}
+
+.post-content
+{
+  text-align: justify;
 }
