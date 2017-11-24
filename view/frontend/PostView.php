@@ -5,7 +5,7 @@
 		<section class="blog" id="blog">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-8">
+					<div class="col-md-12">
 						<div class="blog-post">
 							<h2 class="post-title"><a href="#"><?= htmlspecialchars($post['title']) ?></a></h2>
 							<div class="post-meta">

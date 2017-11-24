@@ -56,10 +56,10 @@
 				              </a>
 					              <ul class="dropdown-menu">
 					              	<li><a href="index.php?action=listPosts">Blog</a></li>
-					                <li><a href="">Création blog post</a></li>
+					                <li><a href="index.php?action=creationPost">Création blog post</a></li>
 					              </ul>
 				            </li>
-							<li><a href="index.php">Contact</a></li>
+							<li><a href="index.php#contact">Contact</a></li>
 						</ul>
 					</div><!-- /.navbar-collapse -->
 				</div>

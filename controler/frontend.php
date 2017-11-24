@@ -22,3 +22,17 @@ function post($id)
    
     require('view/frontend/postView.php');
 }
+
+function createPost()
+{
+    require('view/frontend/addPostView.php');
+}
+
+function addPost($title, $author, $chapo, $content)
+{
+    $postManager = new PostManager();
+    $addedPost = $postManager->Post($title, $author, $chapo, $content);
+
+    require('view/frontend/addPostView.php');
+
+}    
