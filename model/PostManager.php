@@ -25,7 +25,7 @@ class PostManager extends Manager
 public function Post($title, $author, $chapo, $content)
     {
         $db = $this->dbConnect();
-        $new_post = $db->prepare('INSERT INTO post(title, author, chapo, content) VALUES(?, ?, ?, ?)');
+        $new_post = $db->prepare('INSERT INTO posts(title, author, chapo, content) VALUES(?, ?, ?, ?)');
         $addedPost = $new_post->execute(array($title, $author, $chapo, $content));
 
         return $addedPost;
