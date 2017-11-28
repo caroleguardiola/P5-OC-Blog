@@ -10,7 +10,7 @@
 							<h2 class="post-title"><a href="#"><?= htmlspecialchars($posted['title']) ?></a></h2>
 							<div class="post-meta">
 								<span class="author"><a href="#"><?= htmlspecialchars($posted['author']);?></a></span>,
-								<span>Le <strong><?= htmlspecialchars($post['update_date_fr']);?></strong></span>
+								<span>Le <strong><?= htmlspecialchars($posted['update_date_fr']);?></strong></span>
 							</div>
 							
 							<div class="post-content">

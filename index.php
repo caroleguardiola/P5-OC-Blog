@@ -35,12 +35,7 @@ try {
         }
         elseif ($_GET['action'] == 'updatePost') {
              if (isset($_GET['id']) && $_GET['id'] > 0) {
-                 if (!empty($_POST['title']) && !empty($_POST['author']) && !empty($_POST['chapo']) && !empty($_POST['content'])) {
-                    updatePost($_GET['id'], $_POST['title'], $_POST['author'], $_POST['chapo'], $_POST['content']);
-                }
-                else {
-                    throw new Exception('Tous les champs de modification ne sont pas remplis !');
-                }
+                updatePost($_GET['id'], $_POST['title'], $_POST['author'], $_POST['chapo'], $_POST['content']);
             }
             else {
                 throw new Exception('Aucun identifiant de billet envoyé pour modification');

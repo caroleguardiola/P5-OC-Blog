@@ -34,7 +34,7 @@ function addPost($title, $author, $chapo, $content)
     $addedPost = $postManager->Post($title, $author, $chapo, $content);
 
    if (empty($_POST['title']) || empty($_POST['author']) || empty($_POST['chapo']) || empty($_POST['content'])) {
-            throw new Exception('Tous les champs ne sont pas remplis !');
+        throw new Exception('Tous les champs ne sont pas remplis !');
         }
     else{
         header('Location: index.php?action=creationPost');
@@ -54,8 +54,8 @@ function updatePost($id, $title, $author, $chapo, $content)
     $postManager = new PostManager();
     $updatedPost = $postManager->modifPost($id, $title, $author, $chapo, $content);
 
-    if ($updatedPost === false) {
-        throw new Exception('Impossible de modifier l\'article !');
+    if (empty($_POST['title']) || empty($_POST['author']) || empty($_POST['chapo']) || empty($_POST['content'])) { 
+        throw new Exception('Tous les champs de modification ne sont pas remplis !');
     }
     else {
         header('Location: index.php?action=post&id=' . $id);
