@@ -18,13 +18,13 @@ try {
             createPost();
             }
         elseif ($_GET['action'] == 'addPost') {
-                if (!empty($_POST['title']) && !empty($_POST['author']) && !empty($_POST['chapo']) && !empty($_POST['content'])) {
-                    addPost($_POST['title'], $_POST['author'], $_POST['chapo'], $_POST['content']);
-                }
-                else {
-                    throw new Exception('Tous les champs ne sont pas remplis !');
-                }
+            if (isset($_POST['title']) && isset($_POST['author']) && isset($_POST['chapo']) && isset($_POST['content'])) {
+                addPost($_POST['title'], $_POST['author'], $_POST['chapo'], $_POST['content']);
             }
+            else{
+                throw new Exception('Aucun formulaire envoyé');
+            }
+        }    
         elseif ($_GET['action'] == 'modifyPost') {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 modifyPost($_GET['id']);

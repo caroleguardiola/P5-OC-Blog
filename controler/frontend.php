@@ -9,7 +9,7 @@ function home()
 
 function listPosts()
 {
-    $postManager = new PostManager;
+    $postManager = new PostManager();
     $posts = $postManager->getPosts();
 
     require('view/frontend/listPostsView.php');
@@ -17,8 +17,8 @@ function listPosts()
 
 function post($id)
 {
-	$postManager = new PostManager;
-    $post = $postManager->getPost($id);
+	$postManager = new PostManager();
+    $posted = $postManager->getPost($id);
    
     require('view/frontend/postView.php');
 }
@@ -33,7 +33,12 @@ function addPost($title, $author, $chapo, $content)
     $postManager = new PostManager();
     $addedPost = $postManager->Post($title, $author, $chapo, $content);
 
-    require('view/frontend/addPostView.php');
+   if (empty($_POST['title']) || empty($_POST['author']) || empty($_POST['chapo']) || empty($_POST['content'])) {
+            throw new Exception('Tous les champs ne sont pas remplis !');
+        }
+    else{
+        header('Location: index.php?action=creationPost');
+        }
 }    
 
 function modifyPost($id)

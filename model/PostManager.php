@@ -25,7 +25,7 @@ class PostManager extends Manager
 	public function Post($title, $author, $chapo, $content)
     {
         $db = $this->dbConnect();
-        $new_post = $db->prepare('INSERT INTO posts(title, author, chapo, content) VALUES(?, ?, ?, ?)');
+        $new_post = $db->prepare('INSERT INTO posts(title, author, chapo, content, creation_date) VALUES(?, ?, ?, ?, NOW())');
         $addedPost = $new_post->execute(array($title, $author, $chapo, $content));
 
         return $addedPost;
@@ -34,7 +34,7 @@ class PostManager extends Manager
     public function modifPost($postId, $title, $author, $chapo, $content)
     {
         $db = $this->dbConnect();
-        $modified_post = $db->prepare('UPDATE posts SET id = :postId, title = :newtitle, author = :newauthor, chapo = :newchapo, content = :newcontent WHERE id = :postId');
+        $modified_post = $db->prepare('UPDATE posts SET id = :postId, title = :newtitle, author = :newauthor, chapo = :newchapo, content = :newcontent, update_date = NOW() WHERE id = :postId');
         $updatePost = $modified_post->execute(array(
             ':postId' => $postId,
             ':newtitle' => $title, 
