@@ -22,12 +22,27 @@ class PostManager extends Manager
 	    return $post;
 	}
 
-public function Post($title, $author, $chapo, $content)
+	public function Post($title, $author, $chapo, $content)
     {
         $db = $this->dbConnect();
         $new_post = $db->prepare('INSERT INTO posts(title, author, chapo, content) VALUES(?, ?, ?, ?)');
         $addedPost = $new_post->execute(array($title, $author, $chapo, $content));
 
         return $addedPost;
+    }
+
+    public function modifPost($postId, $title, $author, $chapo, $content)
+    {
+        $db = $this->dbConnect();
+        $modified_post = $db->prepare('UPDATE posts SET id = :postId, title = :newtitle, author = :newauthor, chapo = :newchapo, content = :newcontent WHERE id = :postId');
+        $updatePost = $modified_post->execute(array(
+            ':postId' => $postId,
+            ':newtitle' => $title, 
+            ':newauthor' => $author, 
+            ':newchapo' => $chapo, 
+            ':newcontent' => $content
+            ));
+
+        return $updatePost;
     }
 }
