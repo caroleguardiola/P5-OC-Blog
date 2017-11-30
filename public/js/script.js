@@ -125,7 +125,7 @@ $(function () {
 	/*
      * Contact Form Validation Code
      */
-    function checkEmpty(selector) {
+    /*function checkEmpty(selector) {
         if (selector.val()=="" || selector.val()==selector.prop("placeholder")) {
           selector.addClass('formFieldError',500);
           return false;
@@ -196,7 +196,7 @@ $(function () {
     });
 
 
-});
+});*/
 
 
 $(window).load(function () {
