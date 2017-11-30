@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <?php $title='Page d\'accueil';?>
 
 <?php ob_start();?>
@@ -134,14 +138,38 @@
 				</div>
 			</div>
 		</div>
+
+		<?php if (array_key_exists('errors', $_SESSION)): ?>
+            <div class="alert alert-danger">
+              <?= implode('<br>', $_SESSION['errors']); ?>
+        	</div>
+	    <?php unset($_SESSION['errors']); endif; ?>  
+	    <?php if (array_key_exists('success', $_SESSION)): ?>
+            <div class="alert alert-success">
+              Votre email a bien été envoyé !
+            </div>
+    	<?php unset($_SESSION['errors']); endif; ?>
+
 		<div class="row">
 			<div class="col-md-6">
-				<form class="contact-form" role="form">
-					<input type="text" class="form-control" id="fname" name="fname" placeholder="Your Full Name">
-					<input type="email" class="form-control" id="email" name="email" placeholder="Your E-mail">
-					<input type="text" class="form-control" id="subj" name="subj" placeholder="Your Subject">
-					<textarea id="mssg" name="mssg" placeholder="Your Message" class="form-control" rows="10"></textarea>
-					<button class="btn btn-main btn-lg" type="submit" id="send" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Sending..."><i class="fa fa-paper-plane "></i> Send</button>
+				<form class="contact-form" role="form" action="index.php?action=addContact" method="post">
+					<div class="form-group">
+						<label for="name">Votre nom</label>
+						<input type="text" class="form-control" id="name" name="name" value="<?= isset($_SESSION['inputs'] ['name']) ? $_SESSION['inputs'] ['name'] : ''; ?>">
+					</div>
+					<div class="form-group">
+						<label for="email">Votre E-mail</label>
+						<input type="email" class="form-control" id="email" name="email" value="<?= isset($_SESSION['inputs'] ['email']) ? $_SESSION['inputs'] ['email'] : ''; ?>">
+					</div>
+					<div class="form-group">
+						<label for="subject">Votre Sujet</label>
+						<input type="text" class="form-control" id="subject" name="subject" value="<?= isset($_SESSION['inputs'] ['subject']) ? $_SESSION['inputs'] ['subject'] : ''; ?>">
+					</div>
+					<div class="form-group">
+						<label for="message">Votre Message</label>
+						<textarea id="message" name="message" class="form-control" rows="10"><?= isset($_SESSION['inputs'] ['message']) ? $_SESSION['inputs'] ['message'] : ''; ?></textarea>
+					</div>
+					<button class="btn btn-main btn-lg" type="submit" id="send" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Sending..."><i class="fa fa-paper-plane "></i> Envoyer</button>
 				</form>
 				<div id="result-message" role="alert"></div>
 			</div>
@@ -157,6 +185,12 @@
 		</div>
 	</div>
 </section>
+
+<?php
+unset($_SESSION['inputs']);
+unset($_SESSION['success']);
+unset($_SESSION['errors']);
+?>
 
 <?php $content=ob_get_clean(); ?>
 

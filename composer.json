@@ -1,0 +1,12 @@
+{
+    "name": "caroleguardiola/p5_oc_blog",
+    "require": {
+        "swiftmailer/swiftmailer": "^6.0"
+    },
+    "authors": [
+        {
+            "name": "caroleguardiola",
+            "email": "carole.guardiola@gmail.com"
+        }
+    ]
+}
