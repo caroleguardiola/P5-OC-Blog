@@ -41,6 +41,14 @@ try {
                 throw new Exception('Aucun identifiant de billet envoyé pour modification');
             }
         }
+        elseif ($_GET['action'] == 'addContact') {
+            if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['subject']) && isset($_POST['message'])) {
+                contact($_POST['name'], $_POST['email'], $_POST['subject'], $_POST['message']);
+            }
+            else{
+                throw new Exception('Aucun formulaire de contact envoyé');
+            }
+        }    
     }
     else {
         home();
