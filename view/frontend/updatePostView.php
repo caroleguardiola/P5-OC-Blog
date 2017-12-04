@@ -24,8 +24,8 @@
                             <input type="text" id="author" name="author" class="form-control" value="<?php if(isset($posted['author'])) {echo $posted['author'] ;} ?>"/>
                         </div>
                         <div>
-                            <label for="chapo">Chapô</label><br />
-                            <input type="text" id="chapo" name="chapo" class="form-control" value="<?php if(isset($posted['chapo'])) {echo $posted['chapo'] ;}?>"/>
+                            <label for="trailer">Chapô</label><br />
+                            <input type="text" id="trailer" name="trailer" class="form-control" value="<?php if(isset($posted['trailer'])) {echo $posted['trailer'] ;}?>"/>
                         </div>
                         <div>
                             <label for="content">Contenu</label><br />

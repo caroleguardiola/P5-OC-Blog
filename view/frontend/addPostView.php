@@ -24,8 +24,8 @@
                             <input type="text" id="author" name="author" class="form-control" placeholder="Auteur"/>
                         </div>
                         <div>
-                            <label for="chapo">Chapô</label><br />
-                            <input type="text" id="chapo" name="chapo" class="form-control" placeholder="Chapô"/>
+                            <label for="trailer">Chapô</label><br />
+                            <input type="text" id="trailer" name="trailer" class="form-control" placeholder="Chapô"/>
                         </div>
                         <div>
                             <label for="content">Contenu</label><br />

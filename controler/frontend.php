@@ -28,12 +28,12 @@ function createPost()
     require('view/frontend/addPostView.php');
 }
 
-function addPost($title, $author, $chapo, $content)
+function addPost($title, $author, $trailer, $content)
 {
     $postManager = new PostManager();
-    $addedPost = $postManager->Post($title, $author, $chapo, $content);
+    $addedPost = $postManager->Post($title, $author, $trailer, $content);
 
-   if (empty($_POST['title']) || empty($_POST['author']) || empty($_POST['chapo']) || empty($_POST['content'])) {
+   if (empty($_POST['title']) || empty($_POST['author']) || empty($_POST['trailer']) || empty($_POST['content'])) {
         throw new Exception('Tous les champs ne sont pas remplis !');
         }
     else{
@@ -49,12 +49,12 @@ function modifyPost($id)
     require('view/frontend/updatePostView.php');
 }
 
-function updatePost($id, $title, $author, $chapo, $content)
+function updatePost($id, $title, $author, $trailer, $content)
 {
     $postManager = new PostManager();
-    $updatedPost = $postManager->modifPost($id, $title, $author, $chapo, $content);
+    $updatedPost = $postManager->modifPost($id, $title, $author, $trailer, $content);
 
-    if (empty($_POST['title']) || empty($_POST['author']) || empty($_POST['chapo']) || empty($_POST['content'])) { 
+    if (empty($_POST['title']) || empty($_POST['author']) || empty($_POST['trailer']) || empty($_POST['content'])) { 
         throw new Exception('Tous les champs de modification ne sont pas remplis !');
     }
     else {

@@ -14,7 +14,7 @@
 							</div>
 							
 							<div class="post-content">
-								<p><?= htmlspecialchars($posted['chapo']);?></p>
+								<p><?= htmlspecialchars($posted['trailer']);?></p>
 								<p><?= nl2br(htmlspecialchars($posted['content']));?></p>
 								<a href="index.php?action=modifyPost&amp;id=<?= $posted['id'] ?>" class="more-link">Modification blog post <span class="meta-nav">&rarr;</span></a>
 							</div>

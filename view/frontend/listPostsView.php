@@ -24,7 +24,7 @@
 							</div>
 							
 							<div class="post-content">
-								<p><?= htmlspecialchars($data['chapo']);?><br />
+								<p><?= htmlspecialchars($data['trailer']);?><br />
                           		<a href="index.php?action=post&amp;id=<?= $data['id'] ?>" class="more-link">Continue reading <span class="meta-nav">&rarr;</span></a></p>
                           	<?php endwhile ?>
 							</div>
