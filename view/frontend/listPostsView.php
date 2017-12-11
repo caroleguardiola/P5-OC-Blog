@@ -2,39 +2,49 @@
 
 <?php ob_start();?>
 
-		<section class="blog" id="blog">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="section-title st-center">
-							<h3>Recent News</h3>
-							<p>Some Recent News from Blog</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-md-12">
-						<div class="blog-post">
-							<?php while($data=$posts->fetch()) :?>
-							<h2 class="post-title"><a href="#"><?= htmlspecialchars($data['title']);?></a></h2>
-							<div class="post-meta">
-								<span class="author"><a href="#"><?= htmlspecialchars($data['author']);?></a></span>,
-								<span>At <strong><?= htmlspecialchars($data['update_date_fr']);?></strong></span>
-							</div>
-							
-							<div class="post-content">
-								<p><?= htmlspecialchars($data['trailer']);?><br />
-                          		<a href="index.php?action=post&amp;id=<?= $data['id'] ?>" class="more-link">Continue reading <span class="meta-nav">&rarr;</span></a></p>
-                          	<?php endwhile ?>
-							</div>
-						</div>
-						
-					</div>
-					
+<section class="blog" id="blog">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<a href="index.php" class="more-link"><span class="meta-nav">&larr;</span> Retour à la page d'accueil</a> | 
+				<a href="index.php?action=creationPost" class="more-link">Création d'un article <span class="meta-nav">&rarr;</span></a>
+				<div class="section-title st-center">
+					<h3>Blog</h3>
+					<p>Articles récents</p>
 				</div>
 			</div>
-		</section>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="blog-post">
+
+					<?php foreach ($posts as $blog_posts):?>
+						<h2 class="post-title"><a href="index.php?action=post&amp;id=<?= $blog_posts->getId(); ?>" class="more-link""><?= $blog_posts->getTitle();?></a></h2>
+						<div class="post-meta">
+							<!--<span class="author"><a href="#"><?= $blog_posts->getAuthor();?></a></span>,-->
+							<p><strong><?php
+							if ($blog_posts->getDateCreationFr() != $blog_posts->getDateUpdateFr())
+						    {
+						    	echo 'Le ', $blog_posts->getDateUpdateFr();
+						    }else{
+						    	echo 'Le ', $blog_posts->getDateCreationFr();
+							}
+						    ?></strong>
+							</p>
+						</div>
+						
+						<div class="post-content">
+							<p><?= $blog_posts->getTrailer();?></p>
+                      		<p><a href="index.php?action=post&amp;id=<?= $blog_posts->getId(); ?>" class="more-link">Lire la suite <span class="meta-nav">&rarr;</span></a></p>
+                      	</div>
+					<?php endforeach;?>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 <?php $content=ob_get_clean(); ?>
 

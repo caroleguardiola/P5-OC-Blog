@@ -8,18 +8,18 @@ try {
         }
         elseif ($_GET['action'] == 'post') {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
-                post($_GET['id']);
+                uniquePost($_GET['id']);
             }
             else {
                 throw new Exception('Aucun identifiant de billet envoyé');
             }
         }
         elseif ($_GET['action'] == 'creationPost') {
-            createPost();
+            createPostPage();
             }
         elseif ($_GET['action'] == 'addPost') {
-            if (isset($_POST['title']) && isset($_POST['author']) && isset($_POST['chapo']) && isset($_POST['content'])) {
-                addPost($_POST['title'], $_POST['author'], $_POST['chapo'], $_POST['content']);
+            if (isset($_POST['title']) && isset($_POST['author']) && isset($_POST['trailer']) && isset($_POST['content'])) {
+                addPost($_POST['title'], $_POST['author'], $_POST['trailer'], $_POST['content']);
             }
             else{
                 throw new Exception('Aucun formulaire envoyé');
@@ -27,7 +27,7 @@ try {
         }    
         elseif ($_GET['action'] == 'modifyPost') {
             if (isset($_GET['id']) && $_GET['id'] > 0) {
-                modifyPost($_GET['id']);
+                modifyPostPage($_GET['id']);
             }
             else {
                 throw new Exception('Aucun identifiant de billet à modifier envoyé');
@@ -35,7 +35,7 @@ try {
         }
         elseif ($_GET['action'] == 'updatePost') {
              if (isset($_GET['id']) && $_GET['id'] > 0) {
-                updatePost($_GET['id'], $_POST['title'], $_POST['author'], $_POST['chapo'], $_POST['content']);
+                updatePost($_GET['id'], $_POST['title'], $_POST['author'], $_POST['trailer'], $_POST['content']);
             }
             else {
                 throw new Exception('Aucun identifiant de billet envoyé pour modification');
@@ -48,6 +48,9 @@ try {
             else{
                 throw new Exception('Aucun formulaire de contact envoyé');
             }
+        }
+        else {
+            home();
         }    
     }
     else {
@@ -55,5 +58,6 @@ try {
     }
 }
 catch(Exception $e) {
-    echo 'Erreur : ' . $e->getMessage();
+    /*echo 'Erreur : ' . $e->getMessage();*/
+    require ('view/frontend/errorsView.php');
 }

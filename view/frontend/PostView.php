@@ -1,28 +1,34 @@
-<?php $title = htmlspecialchars($posted['title']);?>
+<?php $title = $posted->getTitle();?>
 
 <?php ob_start();?>
 
-		<section class="blog" id="blog">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="blog-post">
-							<h2 class="post-title"><a href="#"><?= htmlspecialchars($posted['title']) ?></a></h2>
-							<div class="post-meta">
-								<span class="author"><a href="#"><?= htmlspecialchars($posted['author']);?></a></span>,
-								<span>Le <strong><?= htmlspecialchars($posted['update_date_fr']);?></strong></span>
-							</div>
-							
-							<div class="post-content">
-								<p><?= htmlspecialchars($posted['trailer']);?></p>
-								<p><?= nl2br(htmlspecialchars($posted['content']));?></p>
-								<a href="index.php?action=modifyPost&amp;id=<?= $posted['id'] ?>" class="more-link">Modification blog post <span class="meta-nav">&rarr;</span></a>
-							</div>
-						</div>
+<section class="blog" id="blog">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<a href="index.php?action=listPosts" class="more-link"><span class="meta-nav">&larr;</span> Retour à la liste des articles</a>
+				<div class="blog-post">
+					<h2 class="post-title-detail"><?= $posted->getTitle(); ?></h2>
+					<div class="post-meta-detail">
+						<p><strong><?= $posted->getAuthor(); ?>, le <?= $posted->getDateCreationFr(),'<br /></strong>';
+							if ($posted->getDateCreationFr() != $posted->getDateUpdateFr())
+						    {
+						    	echo 'Mis à jour le ', $posted->getDateUpdateFr();
+						    }
+						    ?>
+						</p>    
+					</div>
+					
+					<div class="post-content">
+						<p><?= nl2br($posted->getTrailer());?></p>
+						<p><?= nl2br($posted->getContent());?></p>
+						<a href="index.php?action=modifyPost&amp;id=<?= $posted->getId();?>" class="more-link">Modification de l'article <span class="meta-nav">&rarr;</span></a>
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
+	</div>
+</section>    
 
 <?php $content=ob_get_clean(); ?>
 
