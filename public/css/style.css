@@ -214,7 +214,7 @@ h6 {
 .btn.btn-lg {
   padding: 10px 35px;
   letter-spacing: 2px;
-  font-size: 21px;
+  font-size: 18px;
 }
 .btn.btn-sm {
   padding: 7px 20px;
@@ -374,9 +374,15 @@ h6 {
   color: #ff5a00;
 }
 .navbar-default .navbar-brand {
-  color: #ff5a00;
-  text-shadow: 1px 1px 1px rgba(90, 58, 34, 0.5);
+  font-family: "Raleway";
+  font-size: 18px;
   font-weight: 500;
+  letter-spacing: 1px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #ff5a00;
+  -webkit-transition: color 0.3s, background-color 0.3s, padding 0.3s;
+          transition: color 0.3s, background-color 0.3s, padding 0.3s;
 }
 .navbar-brand {
   height: auto;
@@ -496,7 +502,7 @@ h6 {
   font-family: "Raleway";
   color: #ff5a00;
   text-transform: uppercase;
-  font-size: 55px;
+  font-size: 46px;
   line-height: 85px;
   font-weight: 400;
   letter-spacing: 8px;
@@ -618,7 +624,7 @@ h6 {
   color: #5a3a22;
   font-weight: 400;
   letter-spacing: 2px;
-  font-size: 28px;
+  font-size: 24px;
   line-height: 48px;
   display: inline-block;
   *display: inline;
@@ -631,7 +637,7 @@ h6 {
   font-family: "Raleway";
   text-transform: uppercase;
   color: #ff5a00;
-  font-size: 38px;
+  font-size: 30px;
   line-height: 58px;
   font-weight: 700;
   letter-spacing: 3px;

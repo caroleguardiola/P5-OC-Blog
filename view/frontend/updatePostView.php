@@ -49,7 +49,7 @@
                     <label for="content">Contenu</label><br />
                     <textarea id="content" name="content" class="form-control" placeholder="Contenu" rows="10"><?php if (isset($posted)) echo $posted->getContent(); ?></textarea>
                 </div>
-                    <button class="btn btn-main btn-lg" type="submit" id="send"<i class="fa fa-paper-plane "></i> Envoyer</button>
+                    <button class="btn btn-main btn-lg" type="submit" id="send"><i class="fa fa-paper-plane "></i> Envoyer</button>
                 </form>
             <div id="result-message" role="alert"></div>
         </div>

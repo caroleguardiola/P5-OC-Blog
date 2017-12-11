@@ -48,7 +48,7 @@
                     <label for="content">Contenu</label><br />
                     <textarea id="content" name="content" class="form-control" rows="10"><?= isset($_SESSION['inputs'] ['content']) ? $_SESSION['inputs'] ['content'] : ''; ?></textarea>
                 </div>
-                    <button class="btn btn-main btn-lg" type="submit" id="send"<i class="fa fa-paper-plane "></i> Envoyer</button>
+                    <button class="btn btn-main btn-lg" type="submit" id="send"><i class="fa fa-paper-plane "></i> Envoyer</button>
                 </form>
             <div id="result-message" role="alert"></div>
         </div>

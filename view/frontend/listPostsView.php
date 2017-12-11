@@ -19,7 +19,7 @@
 			<div class="col-md-12">
 				<?php foreach ($posts as $blog_posts):?>
 					<div class="blog-post">
-						<h2 class="post-title"><a href="index.php?action=post&amp;id=<?= $blog_posts->getId(); ?>" class="more-link""><?= $blog_posts->getTitle();?></a></h2>
+						<h3 class="post-title"><a href="index.php?action=post&amp;id=<?= $blog_posts->getId(); ?>" class="more-link""><?= $blog_posts->getTitle();?></a></h3>
 						<div class="post-meta">
 							<p><strong><?php
 							if ($blog_posts->getDateCreationFr() != $blog_posts->getDateUpdateFr())
