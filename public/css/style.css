@@ -10,7 +10,7 @@
  */
 body {
   font-family: "Open Sans";
-  color: #808080;
+  color: #5a3a22;
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
@@ -36,21 +36,20 @@ h4,
 h5,
 h6 {
   font-family: "Raleway";
-  color: #4c4c4c;
+  color: #5a3a22;
   letter-spacing: 1px;
   font-weight: 400;
 }
 
 
-
 .photo_presentation
 {
  border: 2px solid rgba(255,90,0, 1);
-  box-shadow: 2px 2px 2px rgba(52, 18, 0, 1);
+  box-shadow: 2px 2px 2px rgba(90, 58, 34, 1);
 }
 .list-social-icons a {
   color: #ff5a00;
-   text-shadow: 2px 2px 2px rgba(52, 18, 0, 1);}
+   text-shadow: 2px 2px 2px rgba(90, 58, 34, 1);}
 .list-social-icons a:hover {
   color: rgba(118, 105, 89, 0.95); }
 .list-social-icons .github:hover {
@@ -70,10 +69,11 @@ h6 {
 
 
 .form-control {
+  color: #5a3a22;
   border-radius: 2px !important;
   padding: 15px 20px !important;
   height: auto;
-  border-color: #e5e5e5 !important;
+  border-color: rgba(90,58,34,0.3)!important;
   box-shadow: none !important;
 }
 .form-control:focus {
@@ -293,19 +293,19 @@ h6 {
   border-color: #ff5a00;
 }
 .btn-dark-o {
-  color: #4c4c4c;
-  border-color: #4c4c4c;
+  color: #5a3a22;
+  border-color: #5a3a22;
   background-color: transparent;
 }
 .btn-dark-o:hover {
   color: #fff;
-  background-color: #4c4c4c;
-  border-color: #4c4c4c;
+  background-color: #5a3a22;
+  border-color: #5a3a22;
 }
 .btn-dark {
   color: #fff;
-  background-color: #4c4c4c;
-  border-color: #4c4c4c;
+  background-color: #5a3a22;
+  border-color: #5a3a22;
 }
 .btn-dark:hover,
 .btn-dark:focus,
@@ -322,8 +322,8 @@ h6 {
 .btn-main:hover,
 .btn-main:focus,
 .btn-main:active {
-  background-color: #33b5ac;
-  border-color: #33b5ac;
+  background-color: #e65100;
+  border-color: #e65100;
   color: #fff;
 }
 .btn-link {
@@ -333,7 +333,7 @@ h6 {
 .btn-link:hover,
 .btn-link:focus,
 .btn-link:active {
-  color: #4c4c4c;
+  color: #5a3a22;
   text-decoration: none;
 }
 .section-title {
@@ -342,7 +342,7 @@ h6 {
 .section-title h3 {
   font-family: "Raleway";
   text-transform: uppercase;
-  color: #4c4c4c;
+  color: #5a3a22;
   font-weight: 400;
   letter-spacing: 2px;
   font-size: 28px;
@@ -362,6 +362,18 @@ h6 {
   line-height: 58px;
   font-weight: 700;
   letter-spacing: 3px;
+}
+
+@media (max-width: 767px) {
+.section-title p {
+  font-family: "Raleway";
+  text-transform: uppercase;
+  color: #ff5a00;
+  font-size: 32px;
+  line-height: 58px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  }
 }
 .section-title.st-center {
   text-align: center;
@@ -505,7 +517,7 @@ h6 {
   font-family: "Raleway";
   color: #ff5a00;
   text-transform: uppercase;
-  font-size: 70px;
+  font-size: 55px;
   line-height: 85px;
   font-weight: 400;
   letter-spacing: 8px;
@@ -513,15 +525,30 @@ h6 {
   margin-bottom: 15px;
   margin-top: 5px;
   padding: 20px 10px;
-  text-shadow: 2px 2px 2px rgba(52, 18, 0, 1);
+  text-shadow: 2px 2px 2px rgba(47,30,18, 1);
 }
+
+@media (max-width: 767px) {
+.home .hero-txt .hero-title {
+    border-bottom: 0;
+    font-size: 38px;
+  }
+}
+
 .home .hero-txt .hero-work {
   font-family: "Raleway";
-  font-weight: 300;
+  font-weight: 500;
   letter-spacing: 2px;
   margin-bottom: 0;
-  font-size: 16px;
+  font-size: 20px;
 }
+
+@media (max-width: 767px) {
+.home .hero-txt .hero-work {
+    font-size: 18px;
+  }
+}
+
 .home .hero-txt .hero-work:after {
   content: "";
   display: block;
@@ -590,9 +617,10 @@ h6 {
 }
 .home_blog .hero-txt .hero-work {
   font-family: "Raleway";
-  font-weight: 300;
+  font-weight: 500;
   letter-spacing: 2px;
   margin-bottom: 0;
+  font-size: 16px;
 }
 .home_blog .hero-txt .hero-work:after {
   content: "";
@@ -655,15 +683,22 @@ h6 {
 .st-navbar-mini .navbar-default .navbar-nav > li.active a:hover,
 .st-navbar-mini .navbar-default .navbar-nav > li.active a:focus,
 .st-navbar-mini .navbar-default .navbar-nav > li.active a:active {
-  background-color: rgba(103, 36, 0, 1);
+  background-color: rgba(90, 58, 34, 1);
 }
 .st-navbar-mini .navbar-default .navbar-nav > li > a
 {
-  color: #341200;
+  color: #ff5a00;
 }
+@media (max-width: 767px) {
+.st-navbar-mini .navbar-default .navbar-nav > li > a
+{
+  background-color: rgba(251, 251, 250, 0.9);
+}
+}
+
 .navbar-default .navbar-brand {
   color: #ff5a00;
-  text-shadow: 1px 1px 1px rgba(52, 18, 0, 0.5);
+  text-shadow: 1px 1px 1px rgba(90, 58, 34, 0.5);
   font-weight: 500;
 }
 .navbar-brand {
@@ -691,32 +726,32 @@ h6 {
 .navbar-nav > li > a:hover,
 .navbar-nav > li > a:focus,
 .navbar-nav > li > a:active {
-  color: #ff5a00;
+  color: #5a3a22;
   outline-width: 0;
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-    color: #672400;
+    color: #5a3a22;
     background-color: transparent;
 }
 .navbar-nav > li.active > a,
 .navbar-nav > li.active a:hover,
 .navbar-nav > li.active a:focus,
 .navbar-nav > li.active a:active {
-  color: #ff5a00;
+  color: #5a3a22;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #672400;
+  color: #ff5a00;
 }
 .navbar-default .navbar-nav > li.active > a,
 .navbar-default .navbar-nav > li.active a:hover,
 .navbar-default .navbar-nav > li.active a:focus,
 .navbar-default .navbar-nav > li.active a:active {
   color: #fff;
-  background-color: rgba(52, 18, 0, 1);
+  background-color: rgba(90, 58, 34, 1);
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #ff5a00;
+  color: #5a3a22;
 }
 .page-header {
   background-image: url(../images/hero-img14.png);
@@ -799,7 +834,7 @@ h6 {
 .st-member .st-member-info .st-member-name {
   font-family: "Raleway";
   display: block;
-  color: #4c4c4c;
+  color: #5a3a22;
   font-size: 30px;
   line-height: 50px;
   font-weight: 400;
@@ -1045,7 +1080,7 @@ h6 {
   line-height: 45px;
   letter-spacing: 1px;
   font-weight: 400;
-  color: #4c4c4c;
+  color: #5a3a22;
   margin-bottom: 10px;
 }
 .st-feature:hover .st-feature-icon {
@@ -1335,7 +1370,7 @@ ul.styled-list.list-star li:before {
 }
 .pricing-table .pricing-header .pt-price {
   font-family: "Raleway";
-  color: #4c4c4c;
+  color: #5a3a22;
   font-size: 40px;
   line-height: 70px;
   font-weight: 400;
@@ -1354,7 +1389,7 @@ ul.styled-list.list-star li:before {
   font-weight: 300;
   font-size: 24px;
   line-height: 40px;
-  color: #4c4c4c;
+  color: #5a3a22;
   border-top: 1px solid #f2f2f2;
   border-bottom: 1px solid #f2f2f2;
 }
@@ -1460,17 +1495,30 @@ ul.styled-list.list-star li:before {
 }
 .blog-post .post-meta a {
   font-weight: bold;
-  color: #4c4c4c;
+  color: #5a3a22;
 }
 .blog-post .post-meta a:hover {
   color: #ff5a00;
 }
 .blog-post .post-meta strong {
-  color: #4c4c4c;
+  color: #5a3a22;
 }
 .blog-post .post-title {
   margin-top: 0;
   margin-bottom: 20px;
+}
+.post-title-detail {
+  font-family: "Raleway";
+  text-transform: uppercase;
+  color: #ff5a00;
+  font-size: 38px;
+  line-height: 58px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-align: center;
+}
+.post-meta-detail p {
+  color: #ff5a00;
 }
 .blog-post .post-thumb {
   margin-bottom: 40px;
@@ -1503,7 +1551,7 @@ ul.styled-list.list-star li:before {
 }
 .widget ul li a:hover .badge {
   text-indent: 0;
-  background-color: #4c4c4c;
+  background-color: #5a3a22;
 }
 .widget ul li .recent-post {
   padding: 10px 0;
@@ -1531,7 +1579,7 @@ ul.styled-list.list-star li:before {
 }
 .widget ul li .recent-post .post-meta a {
   font-weight: bold;
-  color: #4c4c4c;
+  color: #5a3a22;
 }
 .widget ul li .recent-post .post-meta a:hover {
   color: #ff5a00;
@@ -1803,4 +1851,33 @@ background-color: #fbfbfa;
 .post-content
 {
   text-align: justify;
+}
+
+.dropdown-menu > li > a
+{
+  padding: 15px 15px;
+  font-family: "Raleway";
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #ff5a00;
+  -webkit-transition: color 0.3s, background-color 0.3s, padding 0.3s;
+          transition: color 0.3s, background-color 0.3s, padding 0.3s;
+}
+
+@media (max-width: 767px) {
+.navbar-nav .open .dropdown-menu {
+  background-color: rgba(251, 251, 250, 0.9);
+  }
+}
+@media (max-width: 767px) {
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+  color: #ff5a00;
+  }
+} 
+.navbar-default .navbar-toggle .icon-bar
+{
+  background-color: #ff5a00;
 }

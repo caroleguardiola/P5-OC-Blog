@@ -30,9 +30,7 @@
 		<script src="js/respond.min.js"></script>
 		<![endif]-->
 	</head>
-
 	<body data-spy="scroll" data-target=".main-nav">
-
 		<header class="st-navbar">
 			<nav class="navbar navbar-default navbar-fixed-top clearfix" role="navigation">
 				<div class="container"><!-- Brand and toggle get grouped for better mobile display -->
@@ -43,20 +41,19 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="#">Carole Guardiola</a>
+						<a class="navbar-brand" href="index.php">Carole Guardiola</a>
 					</div>
 					
-					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse main-nav" id="sept-main-nav">
 						<ul class="nav navbar-nav navbar-right">
-							<li class="active"><a href="index.php">Accueil</a></li>
+							<li><a href="index.php">Accueil</a></li>
 							<li class="dropdown">
 				              <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="javascript:;">
 				                Blog 
 				              </a>
 					              <ul class="dropdown-menu">
-					              	<li><a href="index.php?action=listPosts">Blog</a></li>
-					                <li><a href="index.php?action=creationPost">Création blog post</a></li>
+					              	<li><a href="index.php?action=listPosts">Articles récents</a></li>
+					                <li><a href="index.php?action=creationPost">Création d'un article</a></li>
 					              </ul>
 				            </li>
 							<li><a href="index.php#contact">Contact</a></li>

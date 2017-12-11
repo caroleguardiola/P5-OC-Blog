@@ -136,7 +136,7 @@ function contact($name, $email, $subject, $message)
         $errors['email'] = "Vous n'avez pas renseigné un e-mail valide !";
     }
     if (!array_key_exists('subject', $_POST) || $_POST['subject'] == '') {
-        $errors['name'] = "Vous n'avez pas renseigné votre sujet !";
+        $errors['subject'] = "Vous n'avez pas renseigné votre sujet !";
     }
     if (!array_key_exists('message', $_POST) || $_POST['message'] == '') {
         $errors['message'] = "Vous n'avez pas renseigné votre message !";
@@ -171,13 +171,7 @@ function contact($name, $email, $subject, $message)
         // Send the message
         $result = $mailer->send($message);
 
-        var_dump($result);
-        /*die();*/
-
         $_SESSION['success'] = 1;
-        /*$message = $_POST['message'];
-        $headers = 'FROM: site@local.dev';
-        mail('carguar.oc@gmail.com', 'Formulaire de contact', $message, $headers);*/
         header('Location: index.php#contact');
     }
 }  

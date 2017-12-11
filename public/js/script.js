@@ -193,10 +193,10 @@ $(function () {
       });
 
       return false;
-    });
+    });*/
 
 
-});*/
+});
 
 
 $(window).load(function () {
