@@ -64,4 +64,4 @@ unset($_SESSION['errors']);
 
 <?php $content=ob_get_clean(); ?>
 
-<?php require('template_post.php'); ?>
+<?php require('template_posts.php'); ?>
