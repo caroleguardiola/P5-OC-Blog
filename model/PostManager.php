@@ -1,48 +1,55 @@
 <?php
 
 require_once('model/Manager.php');
+require_once("model/Post.php");
 
 class PostManager extends Manager
 {
 	public function getPosts()
-	{
-	    $db = $this->dbConnect();
-	    $req = $db->query('SELECT id, title, author, trailer, content, DATE_FORMAT(update_date, \'%d/%m/%Y\') AS update_date_fr, trailer FROM posts ORDER BY update_date DESC LIMIT 0, 5');
-
-	    return $req;
-	}
+    {
+        $db = $this->dbConnect();
+        $req = $db->query('SELECT id, title, author, trailer, content, creation_date, update_date, delete_date FROM post ORDER BY creation_date DESC LIMIT 0, 5');
+        $req->execute();
+        $req->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'Post');
+        
+        return $req->fetchAll();
+    }
 	
 	public function getPost($postId)
-	{
-	    $db = $this->dbConnect();
-	    $req = $db->prepare('SELECT id, title, author, trailer, content, DATE_FORMAT(update_date, \'%d/%m/%Y\') AS update_date_fr FROM posts WHERE id = ?');
-	    $req->execute(array($postId));
-	    $post = $req->fetch();
-
-	    return $post;
-	}
-
-	public function Post($title, $author, $trailer, $content)
     {
         $db = $this->dbConnect();
-        $new_post = $db->prepare('INSERT INTO posts(title, author, trailer, content, creation_date) VALUES(?, ?, ?, ?, NOW())');
-        $addedPost = $new_post->execute(array($title, $author, $trailer, $content));
+        $req = $db->prepare('SELECT id, title, author, trailer, content, creation_date, update_date, delete_date FROM post WHERE id = :id');
+        $req->bindValue(':id', (int) $postId, PDO::PARAM_INT);
+        $req->execute();
+        $req->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'Post');
 
-        return $addedPost;
+        return $req->fetch();
     }
 
-    public function modifPost($postId, $title, $author, $trailer, $content)
+	public function addNewPost(Post $post)
     {
         $db = $this->dbConnect();
-        $modified_post = $db->prepare('UPDATE posts SET id = :postId, title = :newtitle, author = :newauthor, trailer = :newtrailer, content = :newcontent, update_date = NOW() WHERE id = :postId');
-        $updatePost = $modified_post->execute(array(
-            ':postId' => $postId,
-            ':newtitle' => $title, 
-            ':newauthor' => $author, 
-            ':newtrailer' => $trailer, 
-            ':newcontent' => $content
-            ));
+        $req = $db->prepare('INSERT INTO post(title, author, trailer, content, creation_date, update_date, delete_date) VALUES(:newtitle, :newauthor, :newtrailer, :newcontent, NOW(), NOW(), NULL)');
 
-        return $updatePost;
+        $req->bindValue(':newtitle', $post->getTitle(), PDO::PARAM_STR);
+        $req->bindValue(':newauthor', $post->getAuthor(), PDO::PARAM_STR);
+        $req->bindValue(':newtrailer', $post->getTrailer(), PDO::PARAM_STR);
+        $req->bindValue(':newcontent', $post->getContent(), PDO::PARAM_STR);
+
+        $req->execute();
+    }
+
+    public function updatePost(Post $post)
+    {
+        $db = $this->dbConnect();
+        $req = $db->prepare('UPDATE post SET title = :newtitle, author = :newauthor, trailer = :newtrailer, content = :newcontent, update_date = NOW() WHERE id = :id');
+
+        $req->bindValue(':newtitle', $post->getTitle(), PDO::PARAM_STR);
+        $req->bindValue(':newauthor', $post->getAuthor(), PDO::PARAM_STR);
+        $req->bindValue(':newtrailer', $post->getTrailer(), PDO::PARAM_STR);
+        $req->bindValue(':newcontent', $post->getContent(), PDO::PARAM_STR);
+        $req->bindValue(':id', $post->getId(), PDO::PARAM_INT);
+
+        $req->execute();
     }
 }
