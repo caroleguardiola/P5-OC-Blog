@@ -297,6 +297,17 @@ h6 {
   color: #5a3a22;
   text-decoration: none;
 }
+.nicescroll-rails {
+  background: rgba(0, 0, 0, 0.1);
+  width: 5px;
+  z-index: 9999 !important;
+}
+.nicescroll-rails:hover {
+  opacity: 1 !important;
+}
+.nicescroll-rails > div {
+  background: #ff5a00 !important;
+}
 @-webkit-keyframes drop {
   0% {
     top: 5px;
