@@ -739,6 +739,9 @@ textarea.formFieldError {
 .form-control:focus {
   border-color: #ff5a00 !important;
 }
+.contact-form label {
+  color: #ff5a00;
+}
 
 footer.site-footer {
   background-color: #fcfcfc;
