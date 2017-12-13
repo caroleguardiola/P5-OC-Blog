@@ -106,7 +106,7 @@ class Post {
     }
 
 
-    //Getters
+    //Setters
 
     public function setId($id)
     {
