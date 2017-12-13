@@ -23,7 +23,7 @@
               <?= implode('<br>', $_SESSION['errors']); ?>
             </div>
         <?php endif; ?>  
-        <?php if (array_key_exists('success', $_SESSION) && $_SESSION['success'] == true): ?>
+        <?php if (array_key_exists('success', $_SESSION) && $_SESSION['success'] === true): ?>
             <div class="alert alert-success">
               L'article a bien été modifié !
             </div>
