@@ -1,8 +1,12 @@
 <?php
-require('controller/frontendController.php');
+require('controller/PostController.php');
+require('controller/ContactFormController.php');
 
 try {
+
     $controller = new PostController();
+    $controllerContact = new ContactFormController();
+
         if (isset($_GET['action'])) {
             if ($_GET['action'] == 'listPosts') {
                 $controller->listPosts();
@@ -44,7 +48,7 @@ try {
             }
             elseif ($_GET['action'] == 'addContact') {
                 if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['subject']) && isset($_POST['message'])) {
-                    $controller->contact($_POST['name'], $_POST['email'], $_POST['subject'], $_POST['message']);
+                    $controllerContact->contact($_POST['name'], $_POST['email'], $_POST['subject'], $_POST['message']);
                 }
                 else{
                     throw new Exception('Aucun formulaire de contact envoyé');
