@@ -17,24 +17,24 @@
 
 		<div class="row">
 			<div class="col-md-12">
-				<?php foreach ($posts as $blog_posts):?>
+				<?php foreach ($posts as $blogPosts):?>
 					<div class="blog-post">
-						<h3 class="post-title"><a href="index.php?action=post&amp;id=<?= $blog_posts->getId(); ?>" class="more-link""><?= $blog_posts->getTitle();?></a></h3>
+						<h3 class="post-title"><a href="index.php?action=post&amp;id=<?= $blogPosts->getId(); ?>" class="more-link""><?= $blogPosts->getTitle();?></a></h3>
 						<div class="post-meta">
 							<p><strong><?php
-							if ($blog_posts->getDateCreationFr() != $blog_posts->getDateUpdateFr())
+							if ($blogPosts->getDateCreationFr() != $blogPosts->getDateUpdateFr())
 						    {
-						    	echo 'Le ', $blog_posts->getDateUpdateFr();
+						    	echo 'Le ', $blogPosts->getDateUpdateFr();
 						    }else{
-						    	echo 'Le ', $blog_posts->getDateCreationFr();
+						    	echo 'Le ', $blogPosts->getDateCreationFr();
 							}
 						    ?></strong>
 							</p>
 						</div>
 						
 						<div class="post-content">
-							<p><?= $blog_posts->getTrailer();?></p>
-                      		<p><a href="index.php?action=post&amp;id=<?= $blog_posts->getId(); ?>" class="more-link">Lire la suite <span class="meta-nav">&rarr;</span></a></p>
+							<p><?= $blogPosts->getTrailer();?></p>
+                      		<p><a href="index.php?action=post&amp;id=<?= $blogPosts->getId(); ?>" class="more-link">Lire la suite <span class="meta-nav">&rarr;</span></a></p>
                       	</div>
 					</div>
 				<?php endforeach;?>
