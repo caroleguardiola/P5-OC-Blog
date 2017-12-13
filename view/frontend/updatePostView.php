@@ -13,7 +13,7 @@
                 <p><a href="index.php?action=listPosts" class="more-link"><span class="meta-nav">&larr;</span> Retour à la liste des articles</a></p>
                 <div class="section-title st-center">
                     <h3>Modifiez un article !</h3>
-                    <p><?= $posted->getTitle() ; ?></p>
+                    <h1><?= $posted->getTitle() ; ?></h1>
                 </div>
             </div>
         </div>
@@ -49,7 +49,7 @@
                     <label for="content">Contenu</label><br />
                     <textarea id="content" name="content" class="form-control" placeholder="Contenu" rows="10"><?php if (isset($posted)) echo $posted->getContent(); ?></textarea>
                 </div>
-                    <button class="btn btn-main btn-lg" type="submit" id="send"<i class="fa fa-paper-plane "></i> Envoyer</button>
+                    <button class="btn btn-main btn-lg" type="submit" id="send"><i class="fa fa-paper-plane "></i> Envoyer</button>
                 </form>
             <div id="result-message" role="alert"></div>
         </div>

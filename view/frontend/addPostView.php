@@ -13,7 +13,7 @@
                 <p><a href="index.php?action=listPosts" class="more-link"><span class="meta-nav">&larr;</span> Retour à la liste des articles</a></p>
                 <div class="section-title st-center">
                     <h3>Créez un nouvel article !</h3>
-                    <p>N'hésitez pas à nous faire partager vos idées !</p>
+                    <h1>N'hésitez pas à nous faire partager vos idées !</h1>
                 </div>
             </div>
         </div>
@@ -48,7 +48,7 @@
                     <label for="content">Contenu</label><br />
                     <textarea id="content" name="content" class="form-control" rows="10"><?= isset($_SESSION['inputs'] ['content']) ? $_SESSION['inputs'] ['content'] : ''; ?></textarea>
                 </div>
-                    <button class="btn btn-main btn-lg" type="submit" id="send"<i class="fa fa-paper-plane "></i> Envoyer</button>
+                    <button class="btn btn-main btn-lg" type="submit" id="send"><i class="fa fa-paper-plane "></i> Envoyer</button>
                 </form>
             <div id="result-message" role="alert"></div>
         </div>

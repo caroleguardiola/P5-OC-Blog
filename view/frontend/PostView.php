@@ -7,8 +7,10 @@
 		<div class="row">
 			<div class="col-md-12">
 				<a href="index.php?action=listPosts" class="more-link"><span class="meta-nav">&larr;</span> Retour à la liste des articles</a>
-				<div class="blog-post">
-					<h2 class="post-title-detail"><?= $posted->getTitle(); ?></h2>
+				<div class="section-title st-center">
+					<h1><?= $posted->getTitle(); ?></h1>
+				</div>
+				<div class="blog-post-unique">
 					<div class="post-meta-detail">
 						<p><strong><?= $posted->getAuthor(); ?>, le <?= $posted->getDateCreationFr(),'<br /></strong>';
 							if ($posted->getDateCreationFr() != $posted->getDateUpdateFr())
