@@ -8,6 +8,9 @@
 		
 		<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+		<link rel="shortcut icon" href="public/images/favicon_16.png">
+
 		<!-- Bootstrap -->
 		<link href="public/css/bootstrap.min.css" rel="stylesheet">
 		<link href="public/css/font-awesome.min.css" rel="stylesheet">
