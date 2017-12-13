@@ -10,7 +10,7 @@
 				<a href="index.php?action=creationPost" class="more-link">Création d'un article <span class="meta-nav">&rarr;</span></a>
 				<div class="section-title st-center">
 					<h3>Blog</h3>
-					<p>Articles récents</p>
+					<h1>Articles récents</h1>
 				</div>
 			</div>
 		</div>

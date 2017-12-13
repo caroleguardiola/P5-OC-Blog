@@ -6,6 +6,7 @@
 
 <?php ob_start();?>
 
+
 <section class="home" id="home">
 	<div class="container">
 		<div class="row">
@@ -50,86 +51,64 @@
 	</div>
 </section>
 
-<section class="about" id="about">
-	<div class="container">
+<div class="content">
+<section class="container page-wrapper">
+	<section class="about" id="about">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="section-title st-center">
 					<h3>Bienvenue sur mon blog !</h3>
-					<p>Développement web pour tous vos projets</p>
-					<ul class="list-inline list-icons">
-			            <li class="list-inline-item">
-			              <i class="devicons devicons-html5"></i>
-			            </li>
-			            <li class="list-inline-item">
-			              <i class="devicons devicons-css3"></i>
-			            </li>
-			            <li class="list-inline-item">
-			              <i class="devicons devicons-bootstrap"></i>
-			            </li>
-			            <li class="list-inline-item">
-			              <i class="devicons devicons-wordpress"></i>
-			            </li>
-			            <li class="list-inline-item">
-			              <i class="devicons devicons-php"></i>
-			            </li>
-			            <li class="list-inline-item">
-			              <i class="devicons devicons-mysql"></i>
-			            </li>
-			             <li class="list-inline-item">
-			              <i class=" devicons devicons-symfony"></i>
-			            </li>
-				        <li class="list-inline-item">
-			              <i class="devicons devicons-git"></i>
-			            </li>
-			        </ul>
+					<h1>Développement web pour tous vos projets</h1>
+					
 				</div>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-md-12">
-				<p>Texit l, habere se indocti magnosque culpa gravioribus discedere eas indignae diogenem, praetermissum effugiendorum vult dicent, periculum dolere putat. Iucunditatem quid turbulenta patre eae depravatum talem elaborare plerisque repellere, o potiendi tuo aliter, militaris sint tranquillat liberalitati. Locus delicata divelli intemperantes audeam maximisque sitne pulcherrimum aegritudines studium. Habent inveniri fidelissimae aequi andriam laudabilis. Libido censet assiduitas quae probantur tantalo exquisitaque erunt laudatur optari. Late suapte veterum enim qui magna securi eaque proficiscuntur.</p>
-
-				<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
-			        <div class="my-auto">
-			          <h2 class="mb-5">Skills</h2>
-
-			          <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-			          
-
-			          <div class="subheading mb-3">Workflow</div>
-			          <ul class="fa-ul mb-0">
-			            <li>
-			              <i class="fa-li fa fa-check"></i>
-			              Mobile-First, Responsive Design</li>
-			            <li>
-			              <i class="fa-li fa fa-check"></i>
-			              Cross Browser Testing &amp; Debugging</li>
-			            <li>
-			              <i class="fa-li fa fa-check"></i>
-			              Cross Functional Teams</li>
-			            <li>
-			              <i class="fa-li fa fa-check"></i>
-			              Agile Development &amp; Scrum</li>
-			          </ul>
-			        </div>
-			      </section>
-
-				<p><a href="C.GUARDIOLA_CV.pdf" class="more-link">Lien vers mon CV <span class="meta-nav">&rarr;</span></a></p>
-				<p><a href="index.php?action=listPosts">Découvrir les articles récents de mon blog <span class="meta-nav">&rarr;</span></a></p>
+				<p >Mon fort attrait pour le web, et plus particulièrement pour la programmation, m’a conduit à me reconvertir après quinze années en gestion de la paie et comptabilité.</p>
+				<p>J’ai débuté en juin dernier le parcours de Développeur d’applications avec une spécialité PHP/Symfony d'OpenClassRooms.</p>
+				<p>Je souhaite allier mes expériences professionnelles et les acquis de ma formation pour répondre aux besoins de développement d’applications web nécessaires aux entreprises.</p>
 			</div>
+			<div class="col-md-12">
+				<ul class="list-inline list-icons">
+		            <li class="list-inline-item">
+		              <i class="devicons devicons-html5"></i>
+		            </li>
+		            <li class="list-inline-item">
+		              <i class="devicons devicons-css3"></i>
+		            </li>
+		            <li class="list-inline-item">
+		              <i class="devicons devicons-bootstrap"></i>
+		            </li>
+		            <li class="list-inline-item">
+		              <i class="devicons devicons-wordpress"></i>
+		            </li>
+		            <li class="list-inline-item">
+		              <i class="devicons devicons-php"></i>
+		            </li>
+		            <li class="list-inline-item">
+		              <i class="devicons devicons-mysql"></i>
+		            </li>
+		             <li class="list-inline-item">
+		              <i class=" devicons devicons-symfony"></i>
+		            </li>
+			        <li class="list-inline-item">
+		              <i class="devicons devicons-git"></i>
+		            </li>
+		        </ul>
+		        <p><a href="C.GUARDIOLA_CV.pdf" class="more-link">Lien vers mon CV <span class="meta-nav">&rarr;</span></a></p>
+				<p><a href="index.php?action=listPosts">Découvrir les articles récents de mon blog <span class="meta-nav">&rarr;</span></a></p>
+			</div>      
 		</div>
-	</div>
-</section>
+	</section>
 
-<section class="contact" id="contact">
-	<div class="container">
+	<section class="contact" id="contact">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="section-title st-center">
 					<h3>Contactez moi !</h3>
-					<p>N'hésitez pas à m'envoyer un message</p>
+					<h1>N'hésitez pas à m'envoyer un message</h1>
 				</div>
 			</div>
 		</div>
@@ -169,8 +148,9 @@
 				<div id="result-message" role="alert"></div>
 			</div>
 		</div>
-	</div>
+	</section>
 </section>
+</div>
 
 <?php
 unset($_SESSION['inputs']);

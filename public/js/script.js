@@ -46,7 +46,7 @@ $(function () {
 		var element = $('.st-home-unit'),
 			elemHeight = element.height(),
 			winHeight = $(window).height()
-			padding = (winHeight - elemHeight - 200) /2;
+			padding = (winHeight - elemHeight - 650) /2;
 
 		if (padding < 1 ) {
 			padding = 0;

@@ -8,7 +8,7 @@
 			<div class="col-md-12">
 				<a href="index.php?action=listPosts" class="more-link"><span class="meta-nav">&larr;</span> Retour à la liste des articles</a>
 				<div class="section-title st-center">
-					<p><?= $posted->getTitle(); ?></p>
+					<h1><?= $posted->getTitle(); ?></h1>
 				</div>
 				<div class="blog-post-unique">
 					<div class="post-meta-detail">

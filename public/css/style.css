@@ -10,6 +10,7 @@
  */
 body {
   font-family: "Open Sans";
+  background: rgba(238,238,238,1);
   color: #5a3a22;
   font-weight: 400;
   font-size: 14px;
@@ -36,7 +37,7 @@ h4,
 h5,
 h6 {
   font-family: "Raleway";
-  color: #5a3a22;
+  color: #ff5a00;
   letter-spacing: 1px;
   font-weight: 400;
 }
@@ -615,6 +616,15 @@ h6 {
   margin-top: 80px;
 }
 
+.content {
+  padding: 100px;
+}
+
+.page-wrapper {
+  padding: 50px;
+  background-color: #fff;
+}
+
 .section-title {
   margin-bottom: 70px;
 }
@@ -657,9 +667,18 @@ h6 {
 }
 
 .about {
-  padding: 100px 0 0;
-  background: rgba(251,251,250,1);
+  padding: 100px;
   }
+
+.about p {
+  text-align: justify;
+  padding: 0 30px;
+}
+
+.about ul {
+  text-align: justify;
+  padding: 0 30px;
+}
 
 .blog {
   padding: 100px 0;
