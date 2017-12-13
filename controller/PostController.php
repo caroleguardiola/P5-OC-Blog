@@ -66,7 +66,7 @@ class PostController
                 'content' => $_POST['content']
             ]);
             $postManager = new PostManager();
-            $addedPost = $postManager->addNewPost($post);
+            $postManager->addNewPost($post);
 
             $_SESSION['success'] = true;
             
@@ -119,7 +119,7 @@ class PostController
             'content' => $_POST['content']
         ]);
         $postManager = new PostManager();
-        $updatedPost = $postManager->updatePost($post);
+        $postManager->updatePost($post);
 
         $_SESSION['success'] = true;
         
