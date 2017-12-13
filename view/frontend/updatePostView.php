@@ -13,7 +13,7 @@
                 <p><a href="index.php?action=listPosts" class="more-link"><span class="meta-nav">&larr;</span> Retour à la liste des articles</a></p>
                 <div class="section-title st-center">
                     <h3>Modifiez un article !</h3>
-                    <h1><?= $posted->getTitle() ; ?></h1>
+                    <h1><?= htmlspecialchars($posted->getTitle()) ; ?></h1>
                 </div>
             </div>
         </div>
@@ -23,7 +23,7 @@
               <?= implode('<br>', $_SESSION['errors']); ?>
             </div>
         <?php endif; ?>  
-        <?php if (array_key_exists('success', $_SESSION)): ?>
+        <?php if (array_key_exists('success', $_SESSION) && $_SESSION['success'] == true): ?>
             <div class="alert alert-success">
               L'article a bien été modifié !
             </div>
@@ -34,20 +34,20 @@
                 <form action="index.php?action=updatePost&amp;id=<?= $posted->getId() ?>" method="post">
                 <div>
                     <label for="title">Titre</label><br />
-                    <input type="text" id="title" name="title" class="form-control" value="<?php if (isset($posted)) echo $posted->getTitle(); ?>"/>
+                    <input type="text" id="title" name="title" class="form-control" value="<?php if (isset($posted)) echo htmlspecialchars($posted->getTitle()); ?>"/>
 
                 </div>
                 <div>
                     <label for="author">Auteur</label><br />
-                    <input type="text" id="author" name="author" class="form-control" value="<?php if (isset($posted)) echo $posted->getAuthor(); ?>"/>
+                    <input type="text" id="author" name="author" class="form-control" value="<?php if (isset($posted)) echo htmlspecialchars($posted->getAuthor()); ?>"/>
                 </div>
                 <div>
                     <label for="trailer">Chapô</label><br />
-                    <input type="text" id="trailer" name="trailer" class="form-control" value="<?php if (isset($posted)) echo $posted->getTrailer(); ?>"/>
+                    <input type="text" id="trailer" name="trailer" class="form-control" value="<?php if (isset($posted)) echo htmlspecialchars($posted->getTrailer()); ?>"/>
                 </div>
                 <div>
                     <label for="content">Contenu</label><br />
-                    <textarea id="content" name="content" class="form-control" placeholder="Contenu" rows="10"><?php if (isset($posted)) echo $posted->getContent(); ?></textarea>
+                    <textarea id="content" name="content" class="form-control" placeholder="Contenu" rows="10"><?php if (isset($posted)) echo htmlspecialchars($posted->getContent()); ?></textarea>
                 </div>
                     <button class="btn btn-main btn-lg" type="submit" id="send"><i class="fa fa-paper-plane "></i> Envoyer</button>
                 </form>

@@ -59,18 +59,18 @@ class PostController
             header('Location: index.php?action=creationPost');
         }else{
 
-        $post = new Post([
-            'title' => $_POST['title'],
-            'author' => $_POST['author'],
-            'trailer' => $_POST['trailer'],
-            'content' => $_POST['content']
-        ]);
-        $postManager = new PostManager();
-        $addedPost = $postManager->addNewPost($post);
+            $post = new Post([
+                'title' => $_POST['title'],
+                'author' => $_POST['author'],
+                'trailer' => $_POST['trailer'],
+                'content' => $_POST['content']
+            ]);
+            $postManager = new PostManager();
+            $addedPost = $postManager->addNewPost($post);
 
-        $_SESSION['success'] = 1;
-        
-        header('Location: index.php?action=creationPost');
+            $_SESSION['success'] = true;
+            
+            header('Location: index.php?action=creationPost');
         }
     }
 
@@ -121,7 +121,7 @@ class PostController
         $postManager = new PostManager();
         $updatedPost = $postManager->updatePost($post);
 
-        $_SESSION['success'] = 1;
+        $_SESSION['success'] = true;
         
         header('Location: index.php?action=modifyPost&id=' . $id);
         }

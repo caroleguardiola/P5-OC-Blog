@@ -46,9 +46,9 @@ class ContactFormController
               ;
 
             // Send the message
-            $result = $mailer->send($message);
+            $mailer->send($message);
 
-            $_SESSION['success'] = 1;
+            $_SESSION['success'] = true;
             header('Location: index.php#contact');
         }
     }

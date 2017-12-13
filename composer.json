@@ -1,5 +1,8 @@
 {
     "name": "caroleguardiola/p5_oc_blog",
+    "description": "OC - Project 5 - Blog",
+    "type": "project",
+    "license": "proprietary",
     "require": {
         "swiftmailer/swiftmailer": "^6.0"
     },

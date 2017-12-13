@@ -118,7 +118,7 @@
               <?= implode('<br>', $_SESSION['errors']); ?>
         	</div>
 	    <?php endif; ?>  
-	    <?php if (array_key_exists('success', $_SESSION)): ?>
+	    <?php if (array_key_exists('success', $_SESSION) && $_SESSION['success'] == true): ?>
             <div class="alert alert-success">
               Votre email a bien été envoyé !
             </div>
