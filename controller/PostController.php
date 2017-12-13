@@ -38,16 +38,16 @@ class PostController
     {
         $errors = [];
 
-        if (empty($_POST['title']) || !is_string($_POST['title'])) {
+        if (empty($title) || !is_string($title)) {
             $errors['title'] = "Vous n'avez pas renseigné le titre ou le titre est invalide !";
         }
-        if (empty($_POST['author']) || !is_string($_POST['author'])) {
+        if (empty($author) || !is_string($author)) {
             $errors['author'] = "Vous n'avez pas renseigné l'auteur ou l'auteur est invalide !";
         }
-        if (empty($_POST['trailer']) || !is_string($_POST['trailer'])) {
+        if (empty($trailer) || !is_string($trailer)) {
             $errors['trailer'] = "Vous n'avez pas renseigné le chapô ou le chapô est invalide !";
         }
-        if (empty($_POST['content']) || !is_string($_POST['content'])) {
+        if (empty($content) || !is_string($content)) {
             $errors['content'] = "Vous n'avez pas renseigné le contenu ou le contenu est invalide !";
         }
 
@@ -60,10 +60,10 @@ class PostController
         }else{
 
             $post = new Post([
-                'title' => $_POST['title'],
-                'author' => $_POST['author'],
-                'trailer' => $_POST['trailer'],
-                'content' => $_POST['content']
+                'title' => $title,
+                'author' => $author,
+                'trailer' => $trailer,
+                'content' => $content
             ]);
             $postManager = new PostManager();
             $postManager->addNewPost($post);
@@ -90,16 +90,16 @@ class PostController
     {
         $errors = [];
 
-        if (empty($_POST['title']) || !is_string($_POST['title'])) {
+        if (empty($title) || !is_string($title)) {
             $errors['title'] = "Vous n'avez pas renseigné le titre à modifier ou le titre est invalide !";
         }
-        if (empty($_POST['author']) || !is_string($_POST['author'])) {
+        if (empty($author) || !is_string($author)) {
             $errors['author'] = "Vous n'avez pas renseigné l'auteur à modifier ou l'auteur est invalide !";
         }
-        if (empty($_POST['trailer']) || !is_string($_POST['trailer'])) {
+        if (empty($trailer) || !is_string($trailer)) {
             $errors['trailer'] = "Vous n'avez pas renseigné le chapô à modifier ou le chapô est invalide !";
         }
-        if (empty($_POST['content']) || !is_string($_POST['content'])) {
+        if (empty($content) || !is_string($content)) {
             $errors['content'] = "Vous n'avez pas renseigné le contenu à modifier ou le contenu est invalide !";
         }
 
@@ -112,11 +112,11 @@ class PostController
         }else{
 
         $post = new Post([
-            'id' => $_GET['id'],
-            'title' => $_POST['title'],
-            'author' => $_POST['author'],
-            'trailer' => $_POST['trailer'],
-            'content' => $_POST['content']
+            'id' => $id,
+            'title' => $title,
+            'author' => $author,
+            'trailer' => $trailer,
+            'content' => $content
         ]);
         $postManager = new PostManager();
         $postManager->updatePost($post);

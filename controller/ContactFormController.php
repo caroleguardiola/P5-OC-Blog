@@ -6,16 +6,16 @@ class ContactFormController
     {
         $errors = [];
 
-        if (!array_key_exists('name', $_POST) || $_POST['name'] == '') {
+        if (!array_key_exists('name', $_POST) || $name == '') {
             $errors['name'] = "Vous n'avez pas renseigné votre nom !";
         }
-        if (!array_key_exists('email', $_POST) || $_POST['email'] == '' || !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL)) {
+        if (!array_key_exists('email', $_POST) || $email == '' || !filter_var($email,FILTER_VALIDATE_EMAIL)) {
             $errors['email'] = "Vous n'avez pas renseigné un e-mail valide !";
         }
-        if (!array_key_exists('subject', $_POST) || $_POST['subject'] == '') {
+        if (!array_key_exists('subject', $_POST) || $subject == '') {
             $errors['subject'] = "Vous n'avez pas renseigné votre sujet !";
         }
-        if (!array_key_exists('message', $_POST) || $_POST['message'] == '') {
+        if (!array_key_exists('message', $_POST) || $message == '') {
             $errors['message'] = "Vous n'avez pas renseigné votre message !";
         }
 
@@ -39,10 +39,10 @@ class ContactFormController
             $mailer = new Swift_Mailer($transport);
 
             // Create a message
-            $message = (new Swift_Message($_POST['subject']))
-              ->setFrom([$_POST['email'] => $_POST['name']])
+            $message = (new Swift_Message($subject))
+              ->setFrom([$email => $name])
               ->setTo(['carole.guardiola@gmail.com' => 'Carole Guardiola'])
-              ->setBody($_POST['message'])
+              ->setBody($message)
               ;
 
             // Send the message
