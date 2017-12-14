@@ -7,9 +7,9 @@ class Post {
     private   $author;
     private   $trailer;
     private   $content;
-    private   $creation_date;
-    private   $update_date;
-    private   $delete_date;
+    private   $dateCreation;
+    private   $dateUpdate;
+    private   $dateDelete;
 
 
     /**
@@ -69,39 +69,39 @@ class Post {
 
     public function getDateCreation()
     {
-        return $this->creation_date;
+        return $this->dateCreation;
     }
 
     public function getDateCreationFr()
     {
         setlocale (LC_TIME, 'fr_FR','fra');
-        $dateFr = utf8_encode(strftime('%d %B %Y', strtotime($this->creation_date)));
-        $heureFr = utf8_encode(strftime('%Hh%M', strtotime($this->creation_date)));
+        $dateFr = utf8_encode(strftime('%d %B %Y', strtotime($this->dateCreation)));
+        $heureFr = utf8_encode(strftime('%Hh%M', strtotime($this->dateCreation)));
         return $dateFr . ' à ' . $heureFr;
     }
 
     public function getDateUpdate()
     {
-        return $this->update_date;
+        return $this->dateUpdate;
     }
 
     public function getDateUpdateFr()
     {
         setlocale (LC_TIME, 'fr_FR','fra');
-        $dateFr = utf8_encode(strftime('%d %B %Y', strtotime($this->update_date)));
-        $heureFr = utf8_encode(strftime('%Hh%M', strtotime($this->update_date)));
+        $dateFr = utf8_encode(strftime('%d %B %Y', strtotime($this->dateUpdate)));
+        $heureFr = utf8_encode(strftime('%Hh%M', strtotime($this->dateUpdate)));
         return $dateFr . ' à ' . $heureFr;
     }
 
     public function getDateDelete()
     {
-        return $this->delete_date;
+        return $this->dateDelete;
     }
     public function getDateDeleteFr()
     {
         setlocale (LC_TIME, 'fr_FR','fra');
-        $dateFr = utf8_encode(strftime('%d %B %Y', strtotime($this->delete_date)));
-        $heureFr = utf8_encode(strftime('%Hh%M', strtotime($this->delete_date)));
+        $dateFr = utf8_encode(strftime('%d %B %Y', strtotime($this->dateDelete)));
+        $heureFr = utf8_encode(strftime('%Hh%M', strtotime($this->dateDelete)));
         return $dateFr . ' à ' . $heureFr;
     }
 
