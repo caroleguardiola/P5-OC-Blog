@@ -9,7 +9,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 
-		<link rel="shortcut icon" href="favicon.png">
+		<link rel="icon" type="image/png" href="favicon.png" />
 
 		<!-- Bootstrap -->
 		<link href="public/css/bootstrap.min.css" rel="stylesheet">
@@ -44,7 +44,8 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="index.php">Carole Guardiola</a>
+
+						<a class="navbar-brand" href="index.php"><img src="public/images/logo_144.png" alt="logo"></a>
 					</div>
 					
 					<div class="collapse navbar-collapse main-nav" id="sept-main-nav">
