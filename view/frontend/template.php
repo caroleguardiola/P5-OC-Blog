@@ -73,7 +73,7 @@
 		<footer id="footer"> 
 			<div class="container"> 
 				<div class="text-center"> 
-					<p>Copyright &copy; 2017 - <a href="#">Carole Guardiola</a> | Tous droits réservés</p> 
+					<p>Copyright &copy; 2017 - <a href="index.php">Carole Guardiola</a> | Tous droits réservés</p> 
 					<p style="font-size: 10px;">Site "projet étudiant" réalisé dans le cadre du parcours Développeur d'applications PHP/Symfony d'OpenClassrooms.</p>
 				</div> 
 			</div> 

@@ -142,4 +142,17 @@ $(window).load(function () {
 		$('label.btn-main').removeClass('btn-main');
 		$('input[name="filter"]:checked').parent().addClass('btn-main');
 	});
+
+$(window).scroll(function(){
+	if ($(this).scrollTop() > 100) {
+	  $('.scrollup').fadeIn();
+	  } else {
+	    $('.scrollup').fadeOut();
+	  }
+	});
+	$('.scrollup').click(function(){
+	  $("html, body").animate({ scrollTop: 0 }, 1000);
+	    return false;
+	});
+
 });
