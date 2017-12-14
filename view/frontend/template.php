@@ -10,7 +10,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 
 		<link rel="icon" type="image/png" href="favicon.png" />
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+		<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><![endif]-->	
 
 		<!-- Bootstrap -->
 		<link href="public/css/bootstrap.min.css" rel="stylesheet">
