@@ -10,8 +10,8 @@
  */
 body {
   font-family: "Open Sans";
-  background: rgba(238,238,238,1);
-  color: #5a3a22;
+  background: rgba(246,246,246,1);
+  color: #555555;
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
@@ -40,6 +40,11 @@ h6 {
   color: #ff5a00;
   letter-spacing: 1px;
   font-weight: 400;
+}
+h4 {
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 2px;
 }
 .mb250 {
   margin-bottom: 250px !important;
@@ -255,19 +260,19 @@ h6 {
   border-color: #ff5a00;
 }
 .btn-dark-o {
-  color: #5a3a22;
-  border-color: #5a3a22;
+  color: #555555;
+  border-color: #555555;
   background-color: transparent;
 }
 .btn-dark-o:hover {
   color: #fff;
-  background-color: #5a3a22;
-  border-color: #5a3a22;
+  background-color: #555555;
+  border-color: #555555;
 }
 .btn-dark {
   color: #fff;
-  background-color: #5a3a22;
-  border-color: #5a3a22;
+  background-color: #555555;
+  border-color: #555555;
 }
 .btn-dark:hover,
 .btn-dark:focus,
@@ -295,7 +300,7 @@ h6 {
 .btn-link:hover,
 .btn-link:focus,
 .btn-link:active {
-  color: #5a3a22;
+  color: #555555;
   text-decoration: none;
 }
 .nicescroll-rails {
@@ -368,7 +373,7 @@ h6 {
 .st-navbar-mini .navbar-default .navbar-nav > li.active a:hover,
 .st-navbar-mini .navbar-default .navbar-nav > li.active a:focus,
 .st-navbar-mini .navbar-default .navbar-nav > li.active a:active {
-  background-color: rgba(90, 58, 34, 1);
+  background-color: rgba(85, 85, 85, 1);
 }
 .st-navbar-mini .navbar-default .navbar-nav > li > a
 {
@@ -409,18 +414,18 @@ h6 {
 .navbar-nav > li > a:hover,
 .navbar-nav > li > a:focus,
 .navbar-nav > li > a:active {
-  color: #5a3a22;
+  color: #555555;
   outline-width: 0;
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-    color: #5a3a22;
+    color: #555555;
     background-color: transparent;
 }
 .navbar-nav > li.active > a,
 .navbar-nav > li.active a:hover,
 .navbar-nav > li.active a:focus,
 .navbar-nav > li.active a:active {
-  color: #5a3a22;
+  color: #555555;
 }
 .navbar-default .navbar-nav > li > a {
   color: #ff5a00;
@@ -430,11 +435,11 @@ h6 {
 .navbar-default .navbar-nav > li.active a:focus,
 .navbar-default .navbar-nav > li.active a:active {
   color: #fff;
-  background-color: rgba(90, 58, 34, 1);
+  background-color: rgba(85, 85, 85, 1);
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #5a3a22;
+  color: #555555;
 }
 .dropdown-menu > li > a
 {
@@ -456,14 +461,15 @@ h6 {
 
 .photo_presentation
 {
- border: 2px solid rgba(255,90,0, 1);
-  box-shadow: 2px 2px 2px rgba(90, 58, 34, 1);
+  border: 2px solid rgba(255,90,0, 1);
+  box-shadow: 2px 2px 2px rgba(85, 85, 85, 1);
 }
 .list-social-icons a {
   color: #ff5a00;
-   text-shadow: 2px 2px 2px rgba(90, 58, 34, 1);}
+   text-shadow: 2px 2px 2px rgba(85, 85, 85, 1);
+ }
 .list-social-icons a:hover {
-  color: rgba(118, 105, 89, 0.95); }
+  color: rgba(85, 85, 85, 0.95); }
 .list-social-icons .github:hover {
   color: #24292e; }
 .list-social-icons .linkedin:hover {
@@ -478,13 +484,12 @@ h6 {
     color: #ff5a00; }
 
 .home {
-  background-image: url(../images/image_header_napa.jpg);
+  background-image: url(../images/notebook_4.jpg);
   background-position: top center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: cover;
   background-color: #000;
-  padding: 70px 0;
+  padding: 100px 0;
   position: relative
 }
 .home .st-brand {
@@ -501,7 +506,6 @@ h6 {
 .home .hero-txt .hero-title {
   font-family: "Raleway";
   color: #ff5a00;
-  text-transform: uppercase;
   font-size: 46px;
   line-height: 85px;
   font-weight: 400;
@@ -510,7 +514,7 @@ h6 {
   margin-bottom: 15px;
   margin-top: 5px;
   padding: 20px 10px;
-  text-shadow: 2px 2px 2px rgba(47,30,18, 1);
+  text-shadow: 1px 1px 1px rgba(85,85,85, 1);
 }
 .home .hero-txt .hero-work {
   font-family: "Raleway";
@@ -546,11 +550,10 @@ h6 {
 }
 
 .home_blog {
-  background-image: url(../images/image_header_napa_mini.jpg);
+  background-image: url(../images/notebook_6.jpg);
   background-position: top center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: cover;
   background-color: #000;
   padding: 0px 0;
   position: relative
@@ -564,7 +567,7 @@ h6 {
   min-height: 300px;
 }
 .home_blog .hero-txt {
-  color: #fff;
+  color: #ff5a00;
   text-align: center;
   padding-top: 200px;
 }
@@ -587,7 +590,7 @@ h6 {
   font-weight: 500;
   letter-spacing: 2px;
   margin-bottom: 0;
-  font-size: 16px;
+  font-size: 20px;
 }
 .home_blog .hero-txt .hero-work:after {
   content: "";
@@ -616,7 +619,8 @@ h6 {
 }
 
 .content {
-  padding: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .page-wrapper {
@@ -630,7 +634,7 @@ h6 {
 .section-title h3 {
   font-family: "Raleway";
   text-transform: uppercase;
-  color: #5a3a22;
+  color: #555555;
   font-weight: 400;
   letter-spacing: 2px;
   font-size: 24px;
@@ -651,7 +655,7 @@ h6 {
   font-weight: 700;
   letter-spacing: 3px;
 }
-.section-title.st-center {
+.section-title.st-center, .section-title.st-center ul {
   text-align: center;
 }
 .section-title.st-center:before {
@@ -666,7 +670,7 @@ h6 {
 }
 
 .about {
-  padding: 100px;
+  padding-bottom: 100px;
   }
 
 .about p {
@@ -679,12 +683,59 @@ h6 {
   padding: 0 30px;
 }
 
-.blog {
-  padding: 100px 0;
+.about .single-project {
+  text-align: center;
+  padding: 0 30px;
 }
+
+.single-project {
+  margin-bottom: 30px;
+  background-color:#F7F7F7;
+  padding:25px;
+  transition: all 1s ease 0s;
+  -moz-transition: all 1s ease 0s;
+  -webkit-transition: all 1s ease 0s;
+  -o-transition: all 1s ease 0s;
+  -webkit-box-shadow: 0 2px 0 0 #ddd;
+  box-shadow: 0 2px 0 0 #ddd;
+}
+.project {
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+.divider {
+ margin: 30px 0;
+}
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; 
+  border-color: #fff;/* Space out the Bootstrap <hr> more */
+}
+
+.featurette {
+    padding: 0 30px;
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.about img {
+  height: 200px;
+  -webkit-transition: height 0.3s;
+          transition: height 0.3s;
+}
+
 .blog-post {
-  border-bottom: 1px dotted rgba(90,58,34,0.3);
-  margin-bottom: 60px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .blog-post .author img {
   border-radius: 50%;
@@ -695,13 +746,13 @@ h6 {
 }
 .blog-post .post-meta a {
   font-weight: bold;
-  color: #5a3a22;
+  color: #555555;
 }
 .blog-post .post-meta a:hover {
   color: #ff5a00;
 }
 .blog-post .post-meta strong {
-  color: #5a3a22;
+  color: #555555;
 }
 .blog-post .post-title {
   margin-top: 0;
@@ -730,7 +781,7 @@ h6 {
   border-radius: 10px;
 }
 .creation_post {
-  padding: 120px 0;
+  padding-bottom: 50px;
 }
 .creation_post form input,
 .creation_post form textarea {
@@ -741,7 +792,8 @@ h6 {
 }
 
 .contact {
-  padding: 120px 0;
+  padding-bottom: 50px;
+  padding-top: 50px;
 }
 .contact form input,
 .contact form textarea {
@@ -753,11 +805,11 @@ textarea.formFieldError {
   border-color: #e34444 !important;
 }
 .form-control {
-  color: #5a3a22;
+  color: #555555;
   border-radius: 2px !important;
   padding: 15px 20px !important;
   height: auto;
-  border-color: rgba(90,58,34,0.3)!important;
+  border-color: rgba(85, 85, 85, 0.3)!important;
   box-shadow: none !important;
 }
 .form-control:focus {
@@ -842,6 +894,11 @@ a.scrollup:hover{
   background-color: rgba(251, 251, 250, 0.9);
   }
 }
+@media (max-width: 1200px) {
+.home {
+  background-image: url(../images/notebook.jpg);
+  }
+}
 @media (max-width: 768px) {
 .home .hero-txt .hero-title {
     border-bottom: 0;
@@ -877,3 +934,13 @@ a.scrollup:hover{
   letter-spacing: 3px;
   }
 }
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+   .featurette-heading {
+    font-size: 30px;
+  }
+}
+
