@@ -38,7 +38,7 @@
 		                      		<p><a href="index.php?action=post&amp;id=<?= $blogPosts->getId(); ?>" class="more-link">Lire la suite <span class="meta-nav">&rarr;</span></a></p>
 		                      	</div>
 							</div>
-														<hr class="divider">
+							<hr class="divider">
 						<?php endforeach;?>
 					</div>
 				</div>

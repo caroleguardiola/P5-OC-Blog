@@ -130,6 +130,19 @@
 			<hr class="featurette-divider">
 
 		    <div class="row featurette">
+		        <div class="col-md-7 col-md-push-5">
+		          <a class="project" href="http://filmsdepleinair.caroleguardiola.com/" target="_blank"><h4 class="featurette-heading">Les Films de Plein Air</h4></a>
+		          <h5>Site réalisé avec Bootstrap</h5>
+		          <p>Ce site est un projet d'OpenClassRooms réalisé avec Bootstrap pour un festival de films en plein air.</p>
+		        </div>
+		        <div class="col-md-5 col-md-pull-7">
+		          <a class="project" href="http://filmsdepleinair.caroleguardiola.com/" target="_blank"><img class="featurette-image img-responsive center-block" src="public/images/Les Films de Plein Air.png" alt="Les Films de Plein Air"></a>
+		        </div>
+		    </div>
+
+		    <hr class="featurette-divider">
+
+		    <div class="row featurette">
 		        <div class="col-md-7">
 		          <a class="project" href="http://chaletsetcaviar.caroleguardiola.com/" target="_blank"><h4 class="featurette-heading">Chalets et Caviar</h4></a>
 		          <h5>Site réalisé avec WordPress</h5>
@@ -141,20 +154,6 @@
 		      	</a>
 		        </div>
 		    </div>
-				
-		    <hr class="featurette-divider">
-
-		    <div class="row featurette">
-		        <div class="col-md-7 col-md-push-5">
-		          <a class="project" href="http://filmsdepleinair.caroleguardiola.com/" target="_blank"><h4 class="featurette-heading">Les Films de Plein Air</h4></a>
-		          <h5>Site réalisé avec Bootstrap</h5>
-		          <p>Ce site est un projet d'OpenClassRooms réalisé avec Bootstrap pour un festival de films en plein air.</p>
-		        </div>
-		        <div class="col-md-5 col-md-pull-7">
-		          <a class="project" href="http://filmsdepleinair.caroleguardiola.com/" target="_blank"><img class="featurette-image img-responsive center-block" src="public/images/Les Films de Plein Air.png" alt="Les Films de Plein Air"></a>
-		        </div>
-		    </div>
-
 
 	      <!-- /END THE FEATURETTES -->
 
