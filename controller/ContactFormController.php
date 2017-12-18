@@ -1,5 +1,11 @@
 <?php
 
+namespace CaroleGuardiola\P5OCBlog\Controller;
+
+use Swift_SmtpTransport;
+use Swift_Mailer;
+use Swift_Message;
+
 class ContactFormController
 {
     public function contact($name, $email, $subject, $message)
@@ -26,8 +32,6 @@ class ContactFormController
             $_SESSION['inputs'] = $_POST;
             header('Location: index.php#contact');
         }else{
-
-            require_once ('vendor/autoload.php');
 
             // Create the Transport
             $transport = (new Swift_SmtpTransport('smtp.mailtrap.io', 2525))

@@ -1,5 +1,7 @@
 <?php
 
+namespace CaroleGuardiola\P5OCBlog\Model;
+
 class Post {
 
     private   $id;

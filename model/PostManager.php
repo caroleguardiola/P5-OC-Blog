@@ -1,16 +1,17 @@
 <?php
 
-require_once('model/Manager.php');
-require_once("model/Post.php");
+namespace CaroleGuardiola\P5OCBlog\Model;
+
+use \PDO;
 
 class PostManager extends Manager
 {
-	public function getPosts()
+	public function getListPosts()
     {
         $db = $this->dbConnect();
         $req = $db->query('SELECT id, title, author, trailer, content, dateCreation, dateUpdate, dateDelete FROM posts ORDER BY dateUpdate DESC LIMIT 0, 5');
         $req->execute();
-        $req->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'Post');
+        $req->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, '\CaroleGuardiola\P5OCBlog\Model\Post');
         
         return $req->fetchAll();
     }
@@ -21,7 +22,7 @@ class PostManager extends Manager
         $req = $db->prepare('SELECT id, title, author, trailer, content, dateCreation, dateUpdate, dateDelete FROM posts WHERE id = :id');
         $req->bindValue(':id', (int) $postId, PDO::PARAM_INT);
         $req->execute();
-        $req->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'Post');
+        $req->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, '\CaroleGuardiola\P5OCBlog\Model\Post');
 
         return $req->fetch();
     }

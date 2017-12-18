@@ -1,6 +1,9 @@
 <?php
-require('controller/PostController.php');
-require('controller/ContactFormController.php');
+
+use \CaroleGuardiola\P5OCBlog\Controller\PostController;
+use \CaroleGuardiola\P5OCBlog\Controller\ContactFormController;
+
+require_once ('vendor/autoload.php');
 
 try {
 

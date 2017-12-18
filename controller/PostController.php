@@ -1,6 +1,9 @@
 <?php
 
-require_once('model/PostManager.php');
+namespace CaroleGuardiola\P5OCBlog\Controller;
+
+use \CaroleGuardiola\P5OCBlog\Model\PostManager;
+use \CaroleGuardiola\P5OCBlog\Model\Post;
 
 class PostController
 {
@@ -12,7 +15,7 @@ class PostController
     public function listPosts()
     {
         $postManager = new PostManager();
-        $posts = $postManager->getPosts();
+        $posts = $postManager->getListPosts();
 
         require('view/frontend/listPostsView.php');
     }

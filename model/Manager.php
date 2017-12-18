@@ -1,5 +1,9 @@
 <?php
 
+namespace CaroleGuardiola\P5OCBlog\Model;
+
+use \PDO;
+
 class Manager
 {
     protected function dbConnect()

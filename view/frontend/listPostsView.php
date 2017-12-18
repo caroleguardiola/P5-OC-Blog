@@ -20,7 +20,7 @@
 					<div class="col-md-12">
 						<?php foreach ($posts as $blogPosts):?>
 							<div class="blog-post">
-								<h3 class="post-title"><a href="index.php?action=post&amp;id=<?= $blogPosts->getId(); ?>" class="more-link""><?= htmlspecialchars($blogPosts->getTitle());?></a></h3>
+								<h3 class="post-title"><a href="index.php?action=post&amp;id=<?= htmlspecialchars($blogPosts->getId()); ?>" class="more-link""><?= htmlspecialchars($blogPosts->getTitle());?></a></h3>
 								<div class="post-meta">
 									<p><strong><?php
 									if ($blogPosts->getDateCreationFr() != $blogPosts->getDateUpdateFr())
@@ -45,6 +45,8 @@
 		</section>
 	</div>
 </div>
+
+<?php var_dump($blogPosts); ?>
 
 <?php $content=ob_get_clean(); ?>
 
