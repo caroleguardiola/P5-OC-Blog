@@ -123,7 +123,7 @@
 		          <p>Ce site est un projet d'OpenClassRooms réalisé avec PHP pour un blog en PHP.</p>
 		        </div>
 		        <div class="col-md-5 col-md-pull-7">
-		          <a class="project" href="index.php" target="_blank"><img class="featurette-image img-responsive center-block" src="public/images/Mon premier Blog en PHP.png" alt="Mon premier blog en PHP"></a>
+		          <a class="project" href="index.php" target="_blank"><img class="featurette-image img-responsive center-block" src="public/images/Mon premier Blog en PHP_mini.png" alt="Mon premier blog en PHP"></a>
 		        </div>
 		    </div>
 
@@ -136,7 +136,7 @@
 		          <p>Ce site est un projet d'OpenClassRooms réalisé avec Bootstrap pour un festival de films en plein air.</p>
 		        </div>
 		        <div class="col-md-5">
-		          <a class="project" href="http://filmsdepleinair.caroleguardiola.com/" target="_blank"><img class="featurette-image img-responsive center-block" src="public/images/Les Films de Plein Air.png" alt="Les Films de Plein Air"></a>
+		          <a class="project" href="http://filmsdepleinair.caroleguardiola.com/" target="_blank"><img class="featurette-image img-responsive center-block" src="public/images/Les Films de Plein Air_mini.png" alt="Les Films de Plein Air"></a>
 		        </div>
 		    </div>
 
@@ -150,7 +150,7 @@
 		        </div>
 		        <div class="col-md-5 col-md-pull-7">
 		          <a class="project" href="http://chaletsetcaviar.caroleguardiola.com/" target="_blank">
-		          <img class="featurette-image img-responsive center-block" src="public/images/Chalets et Caviar.png" alt="Chalets et Caviar">
+		          <img class="featurette-image img-responsive center-block" src="public/images/Chalets et Caviar_mini.png" alt="Chalets et Caviar">
 		      	</a>
 		        </div>
 		    </div>
