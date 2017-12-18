@@ -121,6 +121,7 @@
 		          <a class="project" href="index.php"><h4 class="featurette-heading">Mon premier Blog en PHP</h4></a>
 		          <h5>Site réalisé avec PHP</h5>
 		          <p>Ce site est un projet d'OpenClassRooms réalisé avec PHP pour un blog en PHP.</p>
+		          <p>Création d'un blog en PHP sans l'utilisation d'un framework ou d'un CMS. Blog collaboratif : chacun peut lire, créer ou modifier un article.</p>
 		        </div>
 		        <div class="col-md-5 col-md-pull-7">
 		          <a class="project" href="index.php" target="_blank"><img class="featurette-image img-responsive center-block" src="public/images/Mon premier Blog en PHP_mini.png" alt="Mon premier blog en PHP"></a>
@@ -134,6 +135,7 @@
 		          <a class="project" href="http://filmsdepleinair.caroleguardiola.com/" target="_blank"><h4 class="featurette-heading">Les Films de Plein Air</h4></a>
 		          <h5>Site réalisé avec Bootstrap</h5>
 		          <p>Ce site est un projet d'OpenClassRooms réalisé avec Bootstrap pour un festival de films en plein air.</p>
+		          <p>Association venant juste d'être créée, budget limité. Bbesoin de communiquer en ligne sur festival, d'annoncer les films projetés et de recueillir les réservations.</p>
 		        </div>
 		        <div class="col-md-5">
 		          <a class="project" href="http://filmsdepleinair.caroleguardiola.com/" target="_blank"><img class="featurette-image img-responsive center-block" src="public/images/Les Films de Plein Air_mini.png" alt="Les Films de Plein Air"></a>
@@ -147,6 +149,8 @@
 		          <a class="project" href="http://chaletsetcaviar.caroleguardiola.com/" target="_blank"><h4 class="featurette-heading">Chalets et Caviar</h4></a>
 		          <h5>Site réalisé avec WordPress</h5>
 		          <p>Ce site est un projet d'OpenClassRooms réalisé avec WordPress pour une agence immobilière de chalets de luxe à Courchevel.</p>
+		          <p>Agence souhaite pouvoir mettre à jour son site régulièrement toute seule. <br /> 
+		          Design "clair, épuré, qui respire la ligne luxe de l'agence".</p>
 		        </div>
 		        <div class="col-md-5 col-md-pull-7">
 		          <a class="project" href="http://chaletsetcaviar.caroleguardiola.com/" target="_blank">
