@@ -12,16 +12,16 @@ class ContactFormController
     {
         $errors = [];
 
-        if (!array_key_exists('name', $_POST) || $name == '') {
+        if (!isset($name) || $name == '') {
             $errors['name'] = "Vous n'avez pas renseigné votre nom !";
         }
-        if (!array_key_exists('email', $_POST) || $email == '' || !filter_var($email,FILTER_VALIDATE_EMAIL)) {
+        if (!isset($email) || $email == '' || !filter_var($email,FILTER_VALIDATE_EMAIL)) {
             $errors['email'] = "Vous n'avez pas renseigné un e-mail valide !";
         }
-        if (!array_key_exists('subject', $_POST) || $subject == '') {
+        if (!isset($subject) || $subject == '') {
             $errors['subject'] = "Vous n'avez pas renseigné votre sujet !";
         }
-        if (!array_key_exists('message', $_POST) || $message == '') {
+        if (!isset($message) || $message == '') {
             $errors['message'] = "Vous n'avez pas renseigné votre message !";
         }
 
