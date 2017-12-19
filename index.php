@@ -1,13 +1,17 @@
 <?php
 
+use \CaroleGuardiola\P5OCBlog\Model\DBConnexion;
 use \CaroleGuardiola\P5OCBlog\Controller\PostController;
 use \CaroleGuardiola\P5OCBlog\Controller\ContactFormController;
 
 require_once ('vendor/autoload.php');
 
+setlocale (LC_TIME, 'fr_FR','fra');
+
 try {
 
-    $controller = new PostController();
+    $db = DBConnexion::dbConnect();
+    $controller = new PostController($db);
     $controllerContact = new ContactFormController();
 
         if (isset($_GET['action'])) {

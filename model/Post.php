@@ -76,7 +76,7 @@ class Post {
 
     public function getDateCreationFr()
     {
-        setlocale (LC_TIME, 'fr_FR','fra');
+        //problème de config sur Windows
         $dateFr = utf8_encode(strftime('%d %B %Y', strtotime($this->dateCreation)));
         $heureFr = utf8_encode(strftime('%Hh%M', strtotime($this->dateCreation)));
         return $dateFr . ' à ' . $heureFr;
@@ -89,7 +89,7 @@ class Post {
 
     public function getDateUpdateFr()
     {
-        setlocale (LC_TIME, 'fr_FR','fra');
+        //problème de config sur Windows
         $dateFr = utf8_encode(strftime('%d %B %Y', strtotime($this->dateUpdate)));
         $heureFr = utf8_encode(strftime('%Hh%M', strtotime($this->dateUpdate)));
         return $dateFr . ' à ' . $heureFr;
@@ -101,7 +101,7 @@ class Post {
     }
     public function getDateDeleteFr()
     {
-        setlocale (LC_TIME, 'fr_FR','fra');
+        //problème de config sur Windows
         $dateFr = utf8_encode(strftime('%d %B %Y', strtotime($this->dateDelete)));
         $heureFr = utf8_encode(strftime('%Hh%M', strtotime($this->dateDelete)));
         return $dateFr . ' à ' . $heureFr;
