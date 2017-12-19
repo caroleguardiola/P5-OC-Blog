@@ -4,6 +4,7 @@ namespace CaroleGuardiola\P5OCBlog\Controller;
 
 use \CaroleGuardiola\P5OCBlog\Model\PostManager;
 use \CaroleGuardiola\P5OCBlog\Model\Post;
+use Exception;
 
 class PostController
 {

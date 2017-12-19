@@ -117,22 +117,42 @@ class Post {
 
     public function setTitle($title)
     {
-        $this->title = $title;
+        if (!is_string($title) || empty($title))
+    {
+        throw new Exception("Titre invalide");
+        }else{   
+            $this->title = $title;
+        }
     }
 
     public function setAuthor($author)
     {
-        $this->author = $author;
+        if (!is_string($author) || empty($author))
+    {
+        throw new Exception("Auteur invalide");
+        }else{   
+            $this->author = $author;
+        }
     }
     
     public function setTrailer($trailer)
     {
-        $this->trailer = $trailer;
+       if (!is_string($trailer) || empty($trailer))
+    {
+        throw new Exception("Chapô invalide");
+        }else{   
+            $this->trailer = $trailer;
+        }
     }
 
     public function setContent($content)
     {
-        $this->content = $content;
+        if (!is_string($content) || empty($content))
+    {
+        throw new Exception("Contenu invalide");
+        }else{   
+            $this->content = $content;
+        }
     }
    
     public function setDateCreation($dateCreation)

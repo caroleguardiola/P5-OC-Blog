@@ -33,8 +33,6 @@
 	</div>
 </div>
 
-<?php var_dump($posted); ?>
-
 <?php $content=ob_get_clean(); ?>
 
 <?php require('template_posts.php'); ?>

@@ -48,7 +48,7 @@
                     </div>
                     <div>
                         <label for="content">Contenu</label><br />
-                        <textarea id="content" name="content" class="form-control" placeholder="Contenu" rows="10"><?php if (isset($posted)) echo htmlspecialchars($posted->getContent()); ?></textarea>
+                        <textarea id="content" name="content" class="form-control" rows="10"><?php if (isset($posted)) echo htmlspecialchars($posted->getContent()); ?></textarea>
                     </div>
                         <button class="btn btn-main btn-lg" type="submit" id="send"><i class="fa fa-paper-plane "></i> Envoyer</button>
                     </form>
