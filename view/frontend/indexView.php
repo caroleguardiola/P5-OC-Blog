@@ -212,7 +212,7 @@
 							<textarea id="message" name="message" class="form-control" rows="10"><?= isset($_SESSION['inputs'] ['message']) ? $_SESSION['inputs'] ['message'] : ''; ?></textarea>
 						</div>
 						<button class="btn btn-main btn-lg" type="submit" id="send"><i class="fa fa-paper-plane "></i> Envoyer</button>
-						<input type="text" id="token" name="token" class="form-control" value="<?= $_SESSION['token']; ?>">
+						<input type="hidden" id="token" name="token" class="form-control" value="<?= $_SESSION['token']; ?>">
 					</form>
 					<div id="result-message" role="alert"></div>
 				</div>
@@ -220,10 +220,6 @@
 		</section>
 	</div>
 </div>
-<h1>Debug</h1>
-<pre><?php print_r($_SESSION); ?></pre>
-<pre><?php print_r($_POST); ?></pre>
-<pre><?php var_dump($_POST); ?></pre>
 
 <?php
 	unset($_SESSION['inputs']);

@@ -56,7 +56,7 @@
                         </div>
                         <button class="btn btn-main btn-lg" type="submit" id="send"><i class="fa fa-paper-plane "></i> Envoyer</button>
                         <div>
-                        <input type="text" id="token" name="token" class="form-control" value="<?= $_SESSION['token']; ?>">
+                        <input type="hidden" id="token" name="token" class="form-control" value="<?= $_SESSION['token']; ?>">
                         </div>
                     </form>
                 <div id="result-message" role="alert"></div>
@@ -64,10 +64,7 @@
         </section>
     </div>
 </div>
-<h1>Debug</h1>
-<pre><?php print_r($_SESSION); ?></pre>
-<pre><?php print_r($_POST); ?></pre>
-<pre><?php var_dump($_POST); ?></pre>
+
 <?php
     unset($_SESSION['inputs']);
     unset($_SESSION['success']);
