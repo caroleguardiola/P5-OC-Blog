@@ -20,17 +20,20 @@
 					<div class="col-md-12">
 						<?php foreach ($posts as $blogPosts):?>
 							<div class="blog-post">
-								<h3 class="post-title"><a href="index.php?action=post&amp;id=<?= $blogPosts->getId(); ?>" class="more-link""><?= htmlspecialchars($blogPosts->getTitle());?></a></h3>
+								<h3 class="post-title">
+									<a href="index.php?action=post&amp;id=<?= $blogPosts->getId(); ?>" class="more-link"><?= htmlspecialchars($blogPosts->getTitle());?></a>
+								</h3>
 								<div class="post-meta">
-									<p><strong><?php
-									if ($blogPosts->getDateCreationFr() != $blogPosts->getDateUpdateFr())
-								    {
-								    	echo 'Le ', htmlspecialchars($blogPosts->getDateUpdateFr());
-								    }else{
-								    	echo 'Le ', htmlspecialchars($blogPosts->getDateCreationFr());
-									}
-								    ?></strong>
-									</p>
+									<p><strong>
+										<?php
+											if ($blogPosts->getDateCreationFr() != $blogPosts->getDateUpdateFr()) {
+										    	echo 'Le ', htmlspecialchars($blogPosts->getDateUpdateFr());
+										    }
+										    else {
+										    	echo 'Le ', htmlspecialchars($blogPosts->getDateCreationFr());
+											}
+								    	?>
+								    </strong></p>
 								</div>
 								
 								<div class="post-content">
@@ -38,7 +41,7 @@
 		                      		<p><a href="index.php?action=post&amp;id=<?= $blogPosts->getId(); ?>" class="more-link">Lire la suite <span class="meta-nav">&rarr;</span></a></p>
 		                      	</div>
 							</div>
-														<hr class="divider">
+							<hr class="divider">
 						<?php endforeach;?>
 					</div>
 				</div>
@@ -48,4 +51,4 @@
 
 <?php $content=ob_get_clean(); ?>
 
-<?php require('template_posts.php'); ?>
+<?php require('templatePosts.php'); ?>

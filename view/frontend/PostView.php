@@ -13,9 +13,9 @@
 					</div>
 					<div class="blog-post-unique">
 						<div class="post-meta-detail">
-							<p><strong><?= htmlspecialchars($posted->getAuthor()); ?>, le <?= htmlspecialchars($posted->getDateCreationFr()),'<br /></strong>';
-								if ($posted->getDateCreationFr() != $posted->getDateUpdateFr())
-							    {
+							<p><strong>
+								<?= htmlspecialchars($posted->getAuthor()); ?>, le <?= htmlspecialchars($posted->getDateCreationFr()),'<br /></strong>';
+								if ($posted->getDateCreationFr() != $posted->getDateUpdateFr()) {
 							    	echo 'Mis à jour le ', htmlspecialchars($posted->getDateUpdateFr());
 							    }
 							    ?>
@@ -33,7 +33,6 @@
 	</div>
 </div>
 
-
 <?php $content=ob_get_clean(); ?>
 
-<?php require('template_posts.php'); ?>
+<?php require('templatePosts.php'); ?>

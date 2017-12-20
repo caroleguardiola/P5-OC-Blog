@@ -1,11 +1,16 @@
 <?php
-require('controller/PostController.php');
-require('controller/ContactFormController.php');
+
+require_once ('config/config.php');
+
+use \CaroleGuardiola\P5OCBlog\Model\DBConnexion;
+use \CaroleGuardiola\P5OCBlog\Controller\PostController;
+use \CaroleGuardiola\P5OCBlog\Controller\ContactFormController;
 
 try {
 
-    $controller = new PostController();
-    $controllerContact = new ContactFormController();
+        $db = DBConnexion::dbConnect();
+        $controller = new PostController($db);
+        $controllerContact = new ContactFormController();
 
         if (isset($_GET['action'])) {
             if ($_GET['action'] == 'listPosts') {
@@ -26,7 +31,7 @@ try {
                 if (isset($_POST['title']) && isset($_POST['author']) && isset($_POST['trailer']) && isset($_POST['content'])) {
                     $controller->addPost($_POST['title'], $_POST['author'], $_POST['trailer'], $_POST['content']);
                 }
-                else{
+                else {
                     throw new Exception('Aucun formulaire envoyé');
                 }
             }    
@@ -55,11 +60,11 @@ try {
                 }
             }
             else {
-                $controller->home();
+                $controllerContact->home();
             }    
         }
         else {
-            $controller->home();
+            $controllerContact->home();
         }
 }
 catch(Exception $e) {

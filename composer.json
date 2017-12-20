@@ -11,5 +11,11 @@
             "name": "caroleguardiola",
             "email": "carole.guardiola@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+    "psr-4" : {
+        "CaroleGuardiola\\P5OCBlog\\Model\\" : "model",
+        "CaroleGuardiola\\P5OCBlog\\Controller\\" : "controller"
+        }
+    }
 }

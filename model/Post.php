@@ -1,6 +1,9 @@
 <?php
 
-class Post {
+namespace CaroleGuardiola\P5OCBlog\Model;
+
+class Post 
+{
 
     private   $id;
     private   $title;
@@ -19,8 +22,7 @@ class Post {
     */
     public function __construct($datas = [])
     {
-        if (!empty($datas))
-        {
+        if (!empty($datas)) {
             $this->hydrate($datas);
         }
     }
@@ -32,8 +34,7 @@ class Post {
         {
             $method = 'set'. ucfirst($key);
 
-            if(method_exists($this, $method))
-            {
+            if(method_exists($this, $method)) {
                 $this->$method($value);
             }
         }
@@ -74,7 +75,7 @@ class Post {
 
     public function getDateCreationFr()
     {
-        setlocale (LC_TIME, 'fr_FR','fra');
+        //problème de config sur Windows
         $dateFr = utf8_encode(strftime('%d %B %Y', strtotime($this->dateCreation)));
         $heureFr = utf8_encode(strftime('%Hh%M', strtotime($this->dateCreation)));
         return $dateFr . ' à ' . $heureFr;
@@ -87,7 +88,7 @@ class Post {
 
     public function getDateUpdateFr()
     {
-        setlocale (LC_TIME, 'fr_FR','fra');
+        //problème de config sur Windows
         $dateFr = utf8_encode(strftime('%d %B %Y', strtotime($this->dateUpdate)));
         $heureFr = utf8_encode(strftime('%Hh%M', strtotime($this->dateUpdate)));
         return $dateFr . ' à ' . $heureFr;
@@ -99,7 +100,7 @@ class Post {
     }
     public function getDateDeleteFr()
     {
-        setlocale (LC_TIME, 'fr_FR','fra');
+        //problème de config sur Windows
         $dateFr = utf8_encode(strftime('%d %B %Y', strtotime($this->dateDelete)));
         $heureFr = utf8_encode(strftime('%Hh%M', strtotime($this->dateDelete)));
         return $dateFr . ' à ' . $heureFr;
@@ -115,22 +116,42 @@ class Post {
 
     public function setTitle($title)
     {
-        $this->title = $title;
+        if (!is_string($title) || empty($title)) {
+            throw new Exception("Titre invalide");
+        }
+        else {   
+            $this->title = $title;
+        }
     }
 
     public function setAuthor($author)
     {
-        $this->author = $author;
+        if (!is_string($author) || empty($author)) {
+            throw new Exception("Auteur invalide");
+        }
+        else {   
+            $this->author = $author;
+        }
     }
     
     public function setTrailer($trailer)
     {
-        $this->trailer = $trailer;
+       if (!is_string($trailer) || empty($trailer)) {
+            throw new Exception("Chapô invalide");
+        }
+        else {   
+            $this->trailer = $trailer;
+        }
     }
 
     public function setContent($content)
     {
-        $this->content = $content;
+        if (!is_string($content) || empty($content)) {
+            throw new Exception("Contenu invalide");
+        }
+        else {   
+            $this->content = $content;
+        }
     }
    
     public function setDateCreation($dateCreation)

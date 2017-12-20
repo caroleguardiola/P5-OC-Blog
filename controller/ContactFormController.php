@@ -1,33 +1,48 @@
 <?php
 
+namespace CaroleGuardiola\P5OCBlog\Controller;
+
+use Swift_SmtpTransport;
+use Swift_Mailer;
+use Swift_Message;
+use Exception;
+
 class ContactFormController
 {
+    public function home()
+    {
+        require('view/frontend/indexView.php');
+    }
+
     public function contact($name, $email, $subject, $message)
     {
         $errors = [];
 
-        if (!array_key_exists('name', $_POST) || $name == '') {
+        if (!isset($name) || $name == '') {
             $errors['name'] = "Vous n'avez pas renseigné votre nom !";
         }
-        if (!array_key_exists('email', $_POST) || $email == '' || !filter_var($email,FILTER_VALIDATE_EMAIL)) {
+        if (!isset($email) || $email == '' || !filter_var($email,FILTER_VALIDATE_EMAIL)) {
             $errors['email'] = "Vous n'avez pas renseigné un e-mail valide !";
         }
-        if (!array_key_exists('subject', $_POST) || $subject == '') {
+        if (!isset($subject) || $subject == '') {
             $errors['subject'] = "Vous n'avez pas renseigné votre sujet !";
         }
-        if (!array_key_exists('message', $_POST) || $message == '') {
+        if (!isset($message) || $message == '') {
             $errors['message'] = "Vous n'avez pas renseigné votre message !";
         }
 
         session_start();
 
+        if (isset($_POST['token']) && $_POST['token'] != $_SESSION['token']) {
+           throw new Exception('Echec lors de l\'envoi !');
+        }
+
         if (!empty($errors)) {
             $_SESSION['errors'] = $errors;
             $_SESSION['inputs'] = $_POST;
             header('Location: index.php#contact');
-        }else{
-
-            require_once ('vendor/autoload.php');
+        }
+        else {
 
             // Create the Transport
             $transport = (new Swift_SmtpTransport('smtp.mailtrap.io', 2525))
@@ -49,7 +64,10 @@ class ContactFormController
             $mailer->send($message);
 
             $_SESSION['success'] = true;
+
             header('Location: index.php#contact');
+
+            unset($_SESSION['token']);
         }
     }
 }

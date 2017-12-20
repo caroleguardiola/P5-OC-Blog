@@ -11,6 +11,10 @@
 
 		<link rel="icon" type="image/png" href="favicon.png" />
 		<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><![endif]-->	
+		<link rel="apple-touch-icon-precomposed" href="favicon_144.png"> 
+		<link rel="apple-touch-icon-precomposed" href="favicon_114.png"> 
+		<link rel="apple-touch-icon-precomposed" href="favicon_72.png"> 
+		<link rel="apple-touch-icon-precomposed" href="favicon_57.png">
 
 		<!-- Bootstrap -->
 		<link href="public/css/bootstrap.min.css" rel="stylesheet">
@@ -25,8 +29,6 @@
 		<link href="public/css/style.css" rel="stylesheet">
 
 
-
-
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -34,6 +36,7 @@
 		<script src="js/respond.min.js"></script>
 		<![endif]-->
 	</head>
+
 	<body data-spy="scroll" data-target=".main-nav">
 		<header class="st-navbar">
 			<nav class="navbar navbar-default navbar-fixed-top clearfix" role="navigation">
@@ -45,8 +48,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-
-						<a class="navbar-brand" href="index.php"><img src="public/images/logo_144.png" alt="logo"></a>
+						<a class="navbar-brand" href="index.php"><img src="public/images/logo.png" alt="logo"></a>
 					</div>
 					
 					<div class="collapse navbar-collapse main-nav" id="sept-main-nav">

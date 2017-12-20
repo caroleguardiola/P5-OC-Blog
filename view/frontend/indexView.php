@@ -1,5 +1,10 @@
 <?php
-  session_start();
+	session_start();
+
+	//On enregistre notre token
+    if (!isset($_SESSION['token'])) {
+       $_SESSION['token'] = md5(time()*rand(357,412));    
+    }
 ?>
 
 <?php $title='Page d\'accueil';?>
@@ -96,7 +101,7 @@
 					<p >Mon fort attrait pour le web, et plus particulièrement pour la programmation, m’a conduit à me reconvertir après quinze années en gestion de la paie et comptabilité.</p>
 					<p>J’ai débuté en juin dernier le parcours de Développeur d’applications avec une spécialité PHP/Symfony d'<a href="https://openclassrooms.com" target="_blank">OpenClassRooms.</a></p>
 					<p>Je souhaite allier mes expériences professionnelles et les acquis de ma formation pour répondre aux besoins de développement d’applications web nécessaires aux entreprises.</p>
-					<p><a href="C.GUARDIOLA_CV.pdf" class="more-link">Lien vers mon CV <span class="meta-nav">&rarr;</span></a></p>
+					<p><a href="public/images/C.GUARDIOLA_CV.pdf" class="more-link" target="_blank">Lien vers mon CV <span class="meta-nav">&rarr;</span></a></p>
 					<p><a href="index.php?action=listPosts">Découvrir les articles récents de mon blog <span class="meta-nav">&rarr;</span></a></p>
 				</div>
 			</div>
@@ -121,9 +126,10 @@
 		          <a class="project" href="index.php"><h4 class="featurette-heading">Mon premier Blog en PHP</h4></a>
 		          <h5>Site réalisé avec PHP</h5>
 		          <p>Ce site est un projet d'OpenClassRooms réalisé avec PHP pour un blog en PHP.</p>
+		          <p>Création d'un blog en PHP sans l'utilisation d'un framework ou d'un CMS. Blog collaboratif : chacun peut lire, créer ou modifier un article.</p>
 		        </div>
 		        <div class="col-md-5 col-md-pull-7">
-		          <a class="project" href="index.php" target="_blank"><img class="featurette-image img-responsive center-block" src="public/images/Mon premier Blog en PHP.png" alt="Mon premier blog en PHP"></a>
+		          <a class="project" href="index.php" target="_blank"><img class="featurette-image img-responsive center-block" src="public/images/Mon premier Blog en PHP_mini.png" alt="Mon premier blog en PHP"></a>
 		        </div>
 		    </div>
 
@@ -131,30 +137,33 @@
 
 		    <div class="row featurette">
 		        <div class="col-md-7">
-		          <a class="project" href="http://chaletsetcaviar.caroleguardiola.com/" target="_blank"><h4 class="featurette-heading">Chalets et Caviar</h4></a>
-		          <h5>Site réalisé avec WordPress</h5>
-		          <p>Ce site est un projet d'OpenClassRooms réalisé avec WordPress pour une agence immobilière de chalets de luxe à Courchevel.</p>
+		          <a class="project" href="http://filmsdepleinair.caroleguardiola.com/" target="_blank"><h4 class="featurette-heading">Les Films de Plein Air</h4></a>
+		          <h5>Site réalisé avec Bootstrap</h5>
+		          <p>Ce site est un projet d'OpenClassRooms réalisé avec Bootstrap pour un festival de films en plein air.</p>
+		          <p>Association venant juste d'être créée, budget limité. <br /> 
+		          Besoin de communiquer en ligne sur le festival, d'annoncer les films projetés et de recueillir les réservations.</p>
 		        </div>
 		        <div class="col-md-5">
-		          <a class="project" href="http://chaletsetcaviar.caroleguardiola.com/" target="_blank">
-		          <img class="featurette-image img-responsive center-block" src="public/images/Chalets et Caviar.png" alt="Chalets et Caviar">
-		      	</a>
+		          <a class="project" href="http://filmsdepleinair.caroleguardiola.com/" target="_blank"><img class="featurette-image img-responsive center-block" src="public/images/Les Films de Plein Air_mini.png" alt="Les Films de Plein Air"></a>
 		        </div>
 		    </div>
-				
+
 		    <hr class="featurette-divider">
 
 		    <div class="row featurette">
 		        <div class="col-md-7 col-md-push-5">
-		          <a class="project" href="http://filmsdepleinair.caroleguardiola.com/" target="_blank"><h4 class="featurette-heading">Les Films de Plein Air</h4></a>
-		          <h5>Site réalisé avec Bootstrap</h5>
-		          <p>Ce site est un projet d'OpenClassRooms réalisé avec Bootstrap pour un festival de films en plein air.</p>
+		          <a class="project" href="http://chaletsetcaviar.caroleguardiola.com/" target="_blank"><h4 class="featurette-heading">Chalets et Caviar</h4></a>
+		          <h5>Site réalisé avec WordPress</h5>
+		          <p>Ce site est un projet d'OpenClassRooms réalisé avec WordPress pour une agence immobilière de chalets de luxe à Courchevel.</p>
+		          <p>Agence souhaitant pouvoir mettre à jour son site régulièrement en autonomie. <br /> 
+		          Design "clair, épuré, qui respire la ligne luxe de l'agence".</p>
 		        </div>
 		        <div class="col-md-5 col-md-pull-7">
-		          <a class="project" href="http://filmsdepleinair.caroleguardiola.com/" target="_blank"><img class="featurette-image img-responsive center-block" src="public/images/Les Films de Plein Air.png" alt="Les Films de Plein Air"></a>
+		          <a class="project" href="http://chaletsetcaviar.caroleguardiola.com/" target="_blank">
+		          <img class="featurette-image img-responsive center-block" src="public/images/Chalets et Caviar_mini.png" alt="Chalets et Caviar">
+		      	</a>
 		        </div>
 		    </div>
-
 
 	      <!-- /END THE FEATURETTES -->
 
@@ -203,6 +212,7 @@
 							<textarea id="message" name="message" class="form-control" rows="10"><?= isset($_SESSION['inputs'] ['message']) ? $_SESSION['inputs'] ['message'] : ''; ?></textarea>
 						</div>
 						<button class="btn btn-main btn-lg" type="submit" id="send"><i class="fa fa-paper-plane "></i> Envoyer</button>
+						<input type="hidden" id="token" name="token" class="form-control" value="<?= $_SESSION['token']; ?>">
 					</form>
 					<div id="result-message" role="alert"></div>
 				</div>
@@ -212,9 +222,9 @@
 </div>
 
 <?php
-unset($_SESSION['inputs']);
-unset($_SESSION['success']);
-unset($_SESSION['errors']);
+	unset($_SESSION['inputs']);
+	unset($_SESSION['success']);
+	unset($_SESSION['errors']);
 ?>
 
 <?php $content=ob_get_clean(); ?>
