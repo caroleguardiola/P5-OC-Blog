@@ -1,5 +1,5 @@
 <?php
-  session_start();
+	session_start();
 ?>
 
 <?php $title='Page d\'accueil';?>
@@ -216,9 +216,9 @@
 </div>
 
 <?php
-unset($_SESSION['inputs']);
-unset($_SESSION['success']);
-unset($_SESSION['errors']);
+	unset($_SESSION['inputs']);
+	unset($_SESSION['success']);
+	unset($_SESSION['errors']);
 ?>
 
 <?php $content=ob_get_clean(); ?>

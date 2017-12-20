@@ -36,6 +36,7 @@
 		<script src="js/respond.min.js"></script>
 		<![endif]-->
 	</head>
+
 	<body data-spy="scroll" data-target=".main-nav">
 		<header class="st-navbar">
 			<nav class="navbar navbar-default navbar-fixed-top clearfix" role="navigation">
@@ -47,7 +48,6 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-
 						<a class="navbar-brand" href="index.php"><img src="public/images/logo.png" alt="logo"></a>
 					</div>
 					

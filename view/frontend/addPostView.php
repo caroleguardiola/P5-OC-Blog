@@ -1,5 +1,5 @@
 <?php
-  session_start();
+    session_start();
 ?>
 
 <?php $title = 'Création d\'articles';?>
@@ -21,12 +21,12 @@
 
             <?php if (array_key_exists('errors', $_SESSION)): ?>
                 <div class="alert alert-danger">
-                  <?= implode('<br>', $_SESSION['errors']); ?>
+                    <?= implode('<br>', $_SESSION['errors']); ?>
                 </div>
             <?php endif; ?>  
             <?php if (array_key_exists('success', $_SESSION) && $_SESSION['success'] === true): ?>
                 <div class="alert alert-success">
-                  Votre article a bien été créé !
+                    Votre article a bien été créé !
                 </div>
             <?php endif; ?>
 
@@ -58,9 +58,9 @@
 </div>
 
 <?php
-unset($_SESSION['inputs']);
-unset($_SESSION['success']);
-unset($_SESSION['errors']);
+    unset($_SESSION['inputs']);
+    unset($_SESSION['success']);
+    unset($_SESSION['errors']);
 ?>
 
 <?php $content=ob_get_clean(); ?>

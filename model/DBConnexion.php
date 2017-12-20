@@ -17,8 +17,7 @@ class DBConnexion
             'password'=>''
         ];
 
-        if(self::$db === null)
-        {
+        if(self::$db === null) {
             $db = new PDO('mysql:host='.$params['host'].'dbname='.$params['dbname'],
                     $params['username'],$params['password']
             );

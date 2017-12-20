@@ -8,11 +8,6 @@ use Exception;
 
 class PostController
 {
-    public function home()
-    {
-    	require('view/frontend/indexView.php');
-    }
-
     public function listPosts()
     {
         $postManager = new PostManager();
@@ -61,7 +56,8 @@ class PostController
             $_SESSION['errors'] = $errors;
             $_SESSION['inputs'] = $_POST;
             header('Location: index.php?action=creationPost');
-        }else{
+        }
+        else {
 
             $post = new Post([
                 'title' => $title,
@@ -113,21 +109,22 @@ class PostController
             $_SESSION['errors'] = $errors;
             $_SESSION['inputs'] = $_POST;
             header('Location: index.php?action=modifyPost&id=' . $id);
-        }else{
+        }
+        else {
 
-        $post = new Post([
-            'id' => $id,
-            'title' => $title,
-            'author' => $author,
-            'trailer' => $trailer,
-            'content' => $content
-        ]);
-        $postManager = new PostManager();
-        $postManager->updatePost($post);
+            $post = new Post([
+                'id' => $id,
+                'title' => $title,
+                'author' => $author,
+                'trailer' => $trailer,
+                'content' => $content
+            ]);
+            $postManager = new PostManager();
+            $postManager->updatePost($post);
 
-        $_SESSION['success'] = true;
-        
-        header('Location: index.php?action=modifyPost&id=' . $id);
+            $_SESSION['success'] = true;
+            
+            header('Location: index.php?action=modifyPost&id=' . $id);
         }
     }
 }

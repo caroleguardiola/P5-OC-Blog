@@ -8,6 +8,11 @@ use Swift_Message;
 
 class ContactFormController
 {
+    public function home()
+    {
+        require('view/frontend/indexView.php');
+    }
+
     public function contact($name, $email, $subject, $message)
     {
         $errors = [];
@@ -31,7 +36,8 @@ class ContactFormController
             $_SESSION['errors'] = $errors;
             $_SESSION['inputs'] = $_POST;
             header('Location: index.php#contact');
-        }else{
+        }
+        else {
 
             // Create the Transport
             $transport = (new Swift_SmtpTransport('smtp.mailtrap.io', 2525))

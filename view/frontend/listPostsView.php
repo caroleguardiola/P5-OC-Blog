@@ -24,15 +24,16 @@
 									<a href="index.php?action=post&amp;id=<?= $blogPosts->getId(); ?>" class="more-link"><?= htmlspecialchars($blogPosts->getTitle());?></a>
 								</h3>
 								<div class="post-meta">
-									<p><strong><?php
-									if ($blogPosts->getDateCreationFr() != $blogPosts->getDateUpdateFr())
-								    {
-								    	echo 'Le ', htmlspecialchars($blogPosts->getDateUpdateFr());
-								    }else{
-								    	echo 'Le ', htmlspecialchars($blogPosts->getDateCreationFr());
-									}
-								    ?></strong>
-									</p>
+									<p><strong>
+										<?php
+											if ($blogPosts->getDateCreationFr() != $blogPosts->getDateUpdateFr()) {
+										    	echo 'Le ', htmlspecialchars($blogPosts->getDateUpdateFr());
+										    }
+										    else {
+										    	echo 'Le ', htmlspecialchars($blogPosts->getDateCreationFr());
+											}
+								    	?>
+								    </strong></p>
 								</div>
 								
 								<div class="post-content">

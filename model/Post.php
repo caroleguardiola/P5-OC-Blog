@@ -2,7 +2,8 @@
 
 namespace CaroleGuardiola\P5OCBlog\Model;
 
-class Post {
+class Post 
+{
 
     private   $id;
     private   $title;
@@ -21,8 +22,7 @@ class Post {
     */
     public function __construct($datas = [])
     {
-        if (!empty($datas))
-        {
+        if (!empty($datas)) {
             $this->hydrate($datas);
         }
     }
@@ -34,8 +34,7 @@ class Post {
         {
             $method = 'set'. ucfirst($key);
 
-            if(method_exists($this, $method))
-            {
+            if(method_exists($this, $method)) {
                 $this->$method($value);
             }
         }
@@ -117,40 +116,40 @@ class Post {
 
     public function setTitle($title)
     {
-        if (!is_string($title) || empty($title))
-    {
-        throw new Exception("Titre invalide");
-        }else{   
+        if (!is_string($title) || empty($title)) {
+            throw new Exception("Titre invalide");
+        }
+        else {   
             $this->title = $title;
         }
     }
 
     public function setAuthor($author)
     {
-        if (!is_string($author) || empty($author))
-    {
-        throw new Exception("Auteur invalide");
-        }else{   
+        if (!is_string($author) || empty($author)) {
+            throw new Exception("Auteur invalide");
+        }
+        else {   
             $this->author = $author;
         }
     }
     
     public function setTrailer($trailer)
     {
-       if (!is_string($trailer) || empty($trailer))
-    {
-        throw new Exception("Chapô invalide");
-        }else{   
+       if (!is_string($trailer) || empty($trailer)) {
+            throw new Exception("Chapô invalide");
+        }
+        else {   
             $this->trailer = $trailer;
         }
     }
 
     public function setContent($content)
     {
-        if (!is_string($content) || empty($content))
-    {
-        throw new Exception("Contenu invalide");
-        }else{   
+        if (!is_string($content) || empty($content)) {
+            throw new Exception("Contenu invalide");
+        }
+        else {   
             $this->content = $content;
         }
     }
