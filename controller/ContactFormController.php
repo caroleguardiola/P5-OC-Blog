@@ -5,6 +5,7 @@ namespace CaroleGuardiola\P5OCBlog\Controller;
 use Swift_SmtpTransport;
 use Swift_Mailer;
 use Swift_Message;
+use Exception;
 
 class ContactFormController
 {
@@ -31,6 +32,10 @@ class ContactFormController
         }
 
         session_start();
+
+        if (isset($_POST['token']) && $_POST['token'] != $_SESSION['token']) {
+           throw new Exception('Echec lors de l\'envoi !');
+        }
 
         if (!empty($errors)) {
             $_SESSION['errors'] = $errors;
@@ -59,7 +64,10 @@ class ContactFormController
             $mailer->send($message);
 
             $_SESSION['success'] = true;
+
             header('Location: index.php#contact');
+
+            unset($_SESSION['token']);
         }
     }
 }

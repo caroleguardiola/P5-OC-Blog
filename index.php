@@ -1,8 +1,6 @@
 <?php
 
-require_once ('vendor/autoload.php');
-
-setlocale (LC_TIME, 'fr_FR','fra');
+require_once ('config.php');
 
 use \CaroleGuardiola\P5OCBlog\Model\DBConnexion;
 use \CaroleGuardiola\P5OCBlog\Controller\PostController;

@@ -1,5 +1,10 @@
 <?php
     session_start();
+
+    //On enregistre notre token
+    if (!isset($_SESSION['token'])) {
+       $_SESSION['token'] = md5(time()*rand(357,412));    
+    }
 ?>
 
 <?php $title = 'Modification d\'articles'; ?>
@@ -33,30 +38,35 @@
             <div class="row">
                 <div class="col-md-offset-1 col-md-10">
                     <form action="index.php?action=updatePost&amp;id=<?= $posted->getId() ?>" method="post">
-                    <div>
-                        <label for="title">Titre</label><br />
-                        <input type="text" id="title" name="title" class="form-control" value="<?php if (isset($posted)) echo htmlspecialchars($posted->getTitle()); ?>"/>
+                        <div>
+                            <label for="title">Titre</label><br />
+                            <input type="text" id="title" name="title" class="form-control" value="<?php if (isset($posted)) echo htmlspecialchars($posted->getTitle()); ?>"/>
 
-                    </div>
-                    <div>
-                        <label for="author">Auteur</label><br />
-                        <input type="text" id="author" name="author" class="form-control" value="<?php if (isset($posted)) echo htmlspecialchars($posted->getAuthor()); ?>"/>
-                    </div>
-                    <div>
-                        <label for="trailer">Chapô</label><br />
-                        <input type="text" id="trailer" name="trailer" class="form-control" value="<?php if (isset($posted)) echo htmlspecialchars($posted->getTrailer()); ?>"/>
-                    </div>
-                    <div>
-                        <label for="content">Contenu</label><br />
-                        <textarea id="content" name="content" class="form-control" rows="10"><?php if (isset($posted)) echo htmlspecialchars($posted->getContent()); ?></textarea>
-                    </div>
+                        </div>
+                        <div>
+                            <label for="author">Auteur</label><br />
+                            <input type="text" id="author" name="author" class="form-control" value="<?php if (isset($posted)) echo htmlspecialchars($posted->getAuthor()); ?>"/>
+                        </div>
+                        <div>
+                            <label for="trailer">Chapô</label><br />
+                            <input type="text" id="trailer" name="trailer" class="form-control" value="<?php if (isset($posted)) echo htmlspecialchars($posted->getTrailer()); ?>"/>
+                        </div>
+                        <div>
+                            <label for="content">Contenu</label><br />
+                            <textarea id="content" name="content" class="form-control" rows="10"><?php if (isset($posted)) echo htmlspecialchars($posted->getContent()); ?></textarea>
+                        </div>
                         <button class="btn btn-main btn-lg" type="submit" id="send"><i class="fa fa-paper-plane "></i> Envoyer</button>
+                        <input type="text" id="token" name="token" class="form-control" value="<?= $_SESSION['token']; ?>">
                     </form>
                 <div id="result-message" role="alert"></div>
             </div>
         </section>
     </div>
 </div>
+<h1>Debug</h1>
+<pre><?php print_r($_SESSION); ?></pre>
+<pre><?php print_r($_POST); ?></pre>
+<pre><?php var_dump($_POST); ?></pre>
 
 <?php
     unset($_SESSION['inputs']);

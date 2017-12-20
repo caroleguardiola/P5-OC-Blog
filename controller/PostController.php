@@ -51,14 +51,18 @@ class PostController
         }
 
         session_start();
-
+        
+        if (isset($_POST['token']) && $_POST['token'] != $_SESSION['token']) {
+           throw new Exception('Echec lors de l\'envoi !');
+        }
+ 
         if (!empty($errors)) {
             $_SESSION['errors'] = $errors;
             $_SESSION['inputs'] = $_POST;
             header('Location: index.php?action=creationPost');
         }
         else {
-
+            
             $post = new Post([
                 'title' => $title,
                 'author' => $author,
@@ -68,9 +72,12 @@ class PostController
             $postManager = new PostManager();
             $postManager->addNewPost($post);
 
+
             $_SESSION['success'] = true;
-            
+
             header('Location: index.php?action=creationPost');
+
+            unset($_SESSION['token']);
         }
     }
 
@@ -104,6 +111,10 @@ class PostController
         }
 
         session_start();
+        
+        if (isset($_POST['token']) && $_POST['token'] != $_SESSION['token']) {
+           throw new Exception('Echec lors de l\'envoi !');
+        }
 
         if (!empty($errors)) {
             $_SESSION['errors'] = $errors;
@@ -125,6 +136,8 @@ class PostController
             $_SESSION['success'] = true;
             
             header('Location: index.php?action=modifyPost&id=' . $id);
+
+            unset($_SESSION['token']);
         }
     }
 }
