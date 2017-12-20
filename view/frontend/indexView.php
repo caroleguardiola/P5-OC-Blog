@@ -101,7 +101,7 @@
 					<p >Mon fort attrait pour le web, et plus particulièrement pour la programmation, m’a conduit à me reconvertir après quinze années en gestion de la paie et comptabilité.</p>
 					<p>J’ai débuté en juin dernier le parcours de Développeur d’applications avec une spécialité PHP/Symfony d'<a href="https://openclassrooms.com" target="_blank">OpenClassRooms.</a></p>
 					<p>Je souhaite allier mes expériences professionnelles et les acquis de ma formation pour répondre aux besoins de développement d’applications web nécessaires aux entreprises.</p>
-					<p><a href="C.GUARDIOLA_CV.pdf" class="more-link">Lien vers mon CV <span class="meta-nav">&rarr;</span></a></p>
+					<p><a href="public/images/C.GUARDIOLA_CV.pdf" class="more-link" target="_blank">Lien vers mon CV <span class="meta-nav">&rarr;</span></a></p>
 					<p><a href="index.php?action=listPosts">Découvrir les articles récents de mon blog <span class="meta-nav">&rarr;</span></a></p>
 				</div>
 			</div>
