@@ -25,7 +25,7 @@ class PostController
             throw new Exception('L\'article demandé n\'existe pas !');
         }
        
-        require('view/frontend/postView.php');
+        require('view/frontend/PostView.php');
     }
 
     public function createPostPage()
