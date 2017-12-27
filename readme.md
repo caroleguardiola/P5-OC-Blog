@@ -2,6 +2,8 @@ P5-OC-Blog
 
 This blog is the 5th project done as part of my training (« Développeur d’applications-spécialité PHP/Symfony » OC).
 
+An exemple is available on http://blog.caroleguardiola.com.
+
 Instructions for this project :
 The website must be developped in PHP without using a framework or a CMS.
 This website must be collaborative : anyone can read, create or update a post. 
